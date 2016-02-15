@@ -6,10 +6,15 @@ postsFactory.$inject = ['$http']
 
 function postsFactory($http){
 	var postsUrl = 'http://localhost:3000/api/posts'
+	var userUrl	 = 'http://localhost:3000/api/users'
 	var posts = {}
 
 	posts.list = function(){
 		return $http.get(postsUrl)
+	}
+
+	posts.getuserinfo = function(){
+		return $http.get(userUrl)
 	}
 
 	posts.show = function(postId){
