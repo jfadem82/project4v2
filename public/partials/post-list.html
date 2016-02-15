@@ -1,8 +1,8 @@
-<h1> You have {{ carsCtrl.cars.length || 0 }} cars</h1>
+<h1> You have {{ postsCtrl.posts.length || 0 }} memories</h1>
 
 <post-form></post-form>
 
-<h2 ng-show="postsCtrl.posts.length">All Posts:</h2>
+<h2 ng-show="postsCtrl.posts.length">All Memories:</h2>
 
 <div class="list-group">
 	<a ng-repeat="post in postsCtrl.posts track by $index" href="#/posts/{{ post._id }}" class="list-group-item">
