@@ -11,6 +11,8 @@ function createPost(req,res){
 	newPost.make = req.body.make
 	newPost.model = req.body.model
 	newPost.year = req.body.year
+	newPost.userid = req.body.userid
+	
 	newPost.save(function(err, post){
 		if(err) throw err
 		res.json({message: "Post Saved!", post: post})

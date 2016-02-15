@@ -5,7 +5,8 @@ var
 var postSchema = new Schema({
 	model: String,
 	make: String,
-	year: Number
+	year: Number,
+	userid: String
 })
 
 var Post = mongoose.model('Post', postSchema)
