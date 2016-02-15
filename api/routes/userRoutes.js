@@ -11,6 +11,7 @@ var User = require('../models/User')
 //make a user
 apiRouter.route('/users')
 	.post(usersController.create)
+	//works in postman
 
 //login
 apiRouter.route('/authenticate')
@@ -23,6 +24,7 @@ apiRouter.use(usersController.checkUser)
 //users index
 apiRouter.route('/users')
 	.get(usersController.index)
+	//works in postman
 
 //logged in user detail
 apiRouter.route('/me')
@@ -32,9 +34,9 @@ apiRouter.route('/me')
 
 //user CRUD
 apiRouter.route('/users/:user_id')
-	.get(usersController.show)
-	.put(usersController.update)
-	.delete(usersController.destroy)
+	.get(usersController.show) //works in postman
+	.put(usersController.update) //THIS SHIT DOESNT WORK, ASK ABOUT IT
+	.delete(usersController.destroy) // works in postman
 
 //cars CRUD
 apiRouter.route('/posts')
