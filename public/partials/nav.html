@@ -6,7 +6,7 @@
 	</div>
 		<ul class="nav navbar-nav navbar-right">
 			<li ng-if="usersCtrl.loggedIn"><a>Hi {{usersCtrl.user.email}}</a></li>
-			<li ng-if="usersCtrl.loggedIn"><a ui-sref="cars">Posts</a></li> 
+			<li ng-if="usersCtrl.loggedIn"><a ui-sref="posts">Posts</a></li> 
 			<li ng-if="!usersCtrl.loggedIn"><a ui-sref="login">Login</a></li>
 			<li ng-if="!usersCtrl.loggedIn"><a ui-sref="signup">Sign up	</a></li>
 			<li ng-if="usersCtrl.loggedIn"><a ng-click="usersCtrl.logout()">Log out</a></li>  
