@@ -56,19 +56,21 @@ function authFactory($http, $q, authTokenFactory, $window){
 		return $http.get('http://localhost:3000/api/users')
 	}
 	// handle login
-	authFactory.login = function(username, password){
+	authFactory.login = function(email, password){
 		return $http.post('http://localhost:3000/api/authenticate', {
-			username: username,
+			email: email,
 			password: password
 		}).then(function(response){
 			authTokenFactory.setToken(response.data.token)
 			return response
 		})
 	}
-	authFactory.signup = function(username, password){
+	authFactory.signup = function(email, password, name, bio){
 		return $http.post('http://localhost:3000/api/users', {
-			username: username,
-			password: password
+			email: email,
+			password: password,
+			name: name,
+			bio: bio
 		})
 	}
 	// handle logout
