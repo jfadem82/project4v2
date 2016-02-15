@@ -18,13 +18,17 @@ function create(req, res){
 	console.log("Creating a user")
 	var user = new User()
 
-	user.name = req.body.name
 	user.email = req.body.email
 	user.password = req.body.password
-
+	user.name = req.body.name
+	user.bio = req.body.bio
+	
+	console.log("req is " + req)
+	console.log("user is " + user)
+	console.log("email is " + user.email)
 	user.save(function(err){
-		if(err){
-			if(err.code == 11000){
+		if(err){ console.log("this error is " + err)
+			if(err.code == 11000){ console.log("nested if")
 				return res.json({success: false, message: "email already exists" })
 			} else {
 				res.send(err)

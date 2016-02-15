@@ -65,10 +65,12 @@ function authFactory($http, $q, authTokenFactory, $window){
 			return response
 		})
 	}
-	authFactory.signup = function(email, password){
+	authFactory.signup = function(email, password, name, bio){
 		return $http.post('http://localhost:3000/api/users', {
 			email: email,
-			password: password
+			password: password,
+			name: name,
+			bio: bio
 		})
 	}
 	// handle logout
