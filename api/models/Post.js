@@ -3,9 +3,9 @@ var
 	Schema = mongoose.Schema
 
 var postSchema = new Schema({
-	model: String,
-	make: String,
-	year: Number,
+	memory: String,
+	date: Number,
+	avatar_url : String,
 	userid: String
 })
 

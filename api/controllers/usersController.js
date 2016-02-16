@@ -29,12 +29,12 @@ function create(req, res){
 	user.save(function(err){
 		if(err){ console.log("this error is " + err)
 			if(err.code == 11000){ console.log("nested if")
-				return res.json({success: false, message: "email already exists" })
+				return res.json({success: false, message: "An Account is already associated with that email" })
 			} else {
 				res.send(err)
 			}
 		}
-		res.json({success: true, message: "User created, Wahey!"})
+		res.json({success: true, message: "Nah, Brah"})
 	})
 }
 
@@ -57,7 +57,7 @@ function update(req, res){
 
 		user.save(function(err){
 			if(err) res.send(err)
-			res.json({success: true, message: "you have been updated!"})
+			res.json({success: true, message: "you got updated, Brah"})
 		})
 	})
 }
@@ -68,7 +68,7 @@ function destroy(req, res){
 		_id: req.params.user_id
 	}, function(err, user){
 		if(err) res.send(err)
-		res.json({success: true, message: "YOU HAVE BEEN TERMINATED!"})
+		res.json({success: true, message: "Beat feet. You're done."})
 	})
 }
 
@@ -82,12 +82,12 @@ function authenticateUser(req, res) {
 	}).select('name email password').exec(function(err, user){
 		if(err) throw err
 		if(!user){
-			res.json({success: false, message: "No such user"})
+			res.json({success: false, message: "No such user, Brah."})
 		} else if(user){
 			// check passwords
 			var validPassword = user.comparePassword(req.body.password)
 			if(!validPassword){
-				res.json({success: false, message: "Invalid password"})
+				res.json({success: false, message: "Invalid password, Brah."})
 			} else {
 				// password is good!
 				var token = jwt.sign({
@@ -99,7 +99,7 @@ function authenticateUser(req, res) {
 				})
 				// now let's actually give it to them!
 				console.log("logged in")
-				res.json({ success: true, message: "enjoy your token!", token: token})
+				res.json({ success: true, message: "You're token up!", token: token})
 			}
 		}
 	})
@@ -112,14 +112,14 @@ function checkUser(req, res, next){
 	if(token){
 		jwt.verify(token, mySpecialSecret, function(err, decoded){
 			if(err){
-				res.status(403).send({success: false, message: "forbidden, token can't be decoded"})
+				res.status(403).send({success: false, message: "Nah, that token is lookin' funny homie"})
 			} else {
 				req.decoded = decoded
 				next()
 			}
 		})
 	} else {
-		res.status(403).send({success: false, message: "no token. You're not even trying"})
+		res.status(403).send({success: false, message: "Brah, where's your token at? Nothing is free."})
 	}
 	// this is going to run EVERY time our API is hit
 	// we want to check if the user is logged in here

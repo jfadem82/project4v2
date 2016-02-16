@@ -17,8 +17,8 @@ function PostDetailsController(postsFactory,$stateParams,$location){
 	}
 	vm.showPost($stateParams.postId)
 
-	vm.updatePost = function(postId, make, model, year){
-		var data = {make: make, model: model, year: year}
+	vm.updatePost = function(postId, memory, date, avatar_url){
+		var data = {memory: memory, date: date, avatar_url: avatar_url}
 		vm.api.updatePost(postId,data).success(function(response){
 			console.log(response)
 			vm.post = response
