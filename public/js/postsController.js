@@ -20,10 +20,9 @@ function PostsController (postsFactory){
 		.success(function(res){
 			vm.posts = res
 		})
-	vm.addPost = function(make,model,year, userid){
+	vm.addPost = function(make,model,year){
 			
-		var data = {make:make, model:model, year:year, userid:userid}
-		console.log("user id is " + userid)
+		var data = {make:make, model:model, year:year}
 		vm.api.addPost(data)
 			.then(function success(res){
 				vm.posts.push(res.data.post)
