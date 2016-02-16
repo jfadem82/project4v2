@@ -12,6 +12,7 @@ function allAlbums(req,res){
 function createAlbum(req,res){
 	console.log("running createAlbum in back end controller")
 	var newAlbum = new Album
+	newAlbum.name = req.body.name
 	newAlbum.userid = req.decoded.userid
 
 	newAlbum.save(function(err, album){

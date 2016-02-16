@@ -15,6 +15,8 @@ function AlbumsController (albumsFactory){
 	vm.addAlbum = function(name){
 			console.log("running addAlbum in controller")
 		var data = {name:name}
+			console.log("data is "  + JSON.stringify(data))
+			
 		vm.api.addAlbum(data)
 			.then(function success(res){
 				vm.albums.push(res.data.album)
