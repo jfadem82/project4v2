@@ -6,20 +6,20 @@ AlbumsController.$inject = ['albumsFactory']
 
 function AlbumsController (albumsFactory){
 	var vm = this;
-	vm.api = postsFactory
-	vm.posts = []
-	vm.newPost = {}
+	vm.api = albumsFactory
+	vm.albums = []
+	vm.newAlbum = {}
 	vm.api.list()
 		.success(function(res){
-			vm.posts = res
+			vm.albums = res
 		})
-	vm.addPost = function(make,model,year){
+	vm.addAlbum = function(){
 			
-		var data = {make:make, model:model, year:year}
-		vm.api.addPost(data)
+		var data = {}
+		vm.api.addAlbum(data)
 			.then(function success(res){
-				vm.posts.push(res.data.post)
-				vm.newPost = {}
+				vm.albums.push(res.data.album)
+				vm.newAlbum = {}
 			})
 	}
 }
