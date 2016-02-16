@@ -26,7 +26,7 @@ function PostsController (postsFactory, $window){
 
 
 	vm.addPost = function(make,model,year, avatar_url){
-			
+			// console.log("avatar_url is " + avatar_url)
 		var data = {make:make, model:model, year:year, avatar_url:avatar_url}
 		vm.api.addPost(data)
 			.then(function success(res){
@@ -53,6 +53,9 @@ function PostsController (postsFactory, $window){
   		*/
 		function upload_file(file, signed_request, url){
 			console.log(file)
+			console.log(signed_request)
+			console.log(url)
+			$window.localStorage.setItem('url', url)
 			var xhr = new XMLHttpRequest();
 			xhr.open("PUT", signed_request);
 			xhr.setRequestHeader('x-amz-acl', 'public-read');
@@ -60,10 +63,11 @@ function PostsController (postsFactory, $window){
 			  if (xhr.status === 200) {
 			      document.getElementById("preview").src = url;            
 			      document.getElementById("avatar_url").value = url;
+			      vm.newPost.avatar_url = url
 			  }
 			};
 		  xhr.onerror = function() {
-		      console.log("in error")
+		      console.log("vanilla AJax call : " + JSON.stringify(xhr))
 		      alert("Could not upload file."); 
 		  };
 		  xhr.send(file);
@@ -75,6 +79,7 @@ function PostsController (postsFactory, $window){
 		  request.
 		*/
 		function get_signed_request(file){
+			console.log("getting signed request")
 		var xhr = new XMLHttpRequest();
 		xhr.open("GET", "http://localhost:3000/sign_s3?file_name="+file.name+"&file_type="+file.type);
 		xhr.onreadystatechange = function(){

@@ -4,10 +4,10 @@
 	<div class="panel-heading"><h3 class="panel-title">Add A New Post</h3></div>
 	<div class="panel-body">
 		<form id="new-post-form" ng-submit="postsCtrl.addPost(postsCtrl.newPost.make,postsCtrl.newPost.model,postsCtrl.newPost.year,postsCtrl.newPost.avatar_url)">
-		<input type="file" id="file_input" ng-model="postsCtrl.newPost.avatar_url" ng-click="postsCtrl.sthree()"/>
+		<input type="file" id="file_input" ng-click="postsCtrl.sthree()"/>
   			<p id="status">Please select a file</p>
   			<img class="img-responsive"  id="preview" src="" />
-		<input type="hidden" id="avatar_url" name="avatar_url" value="/images/default.png" />
+		<input type="hidden" id="avatar_url" name="avatar_url" ng-model="postsCtrl.newPost.avatar_url" />
 			<div class="form-group">    
 		    	<input type="text" name="make" ng-model="postsCtrl.newPost.make" placeholder="Make" class="form-control">
 		    </div>
