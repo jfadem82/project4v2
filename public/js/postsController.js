@@ -9,13 +9,6 @@ function PostsController (postsFactory, $window){
 	console.log("posts controller")
 	vm.api = postsFactory
 	vm.posts = []
-	vm.userid = {}
-	vm.userinfo = vm.api.getuserinfo()
-		.success(function(res){
-			console.log("here is the res " + JSON.stringify(res))
-			vm.userid = JSON.stringify(res[0]["_id"])
-			console.log("here is the vm.userinfo " + vm.userinfo)
-		})
 	vm.newPost = {}
 	vm.api.list()
 		.success(function(res){

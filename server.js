@@ -7,12 +7,13 @@ var express 	= require('express'),
 	port 		= process.env.PORT || 3000,
 	mongoose 	= require('mongoose'),
 	cors 		= require('cors'),
-	apiRouter 	= require('./api/routes/userRoutes')
+	apiRouter 	= require('./api/routes/Routes')
 	auth		= require('./config/auth.js')
 	AWS_ACCESS_KEY 	= process.env.AWS_ACCESS_KEY;
 	AWS_SECRET_KEY 	= process.env.AWS_SECRET_KEY;
 	S3_BUCKET 	 	= process.env.S3_BUCKET;
 
+////comments
 mongoose.connect('mongodb://localhost:27017/project4v2')
 
 // set up middleware
