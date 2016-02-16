@@ -11,6 +11,7 @@ function createPost(req,res){
 	newPost.make = req.body.make
 	newPost.model = req.body.model
 	newPost.year = req.body.year
+	newPost.avatar_url = req.body.avatar_url
 	newPost.userid = req.decoded.userid
 
 	newPost.save(function(err, post){

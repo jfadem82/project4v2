@@ -6,6 +6,7 @@ var postSchema = new Schema({
 	model: String,
 	make: String,
 	year: Number,
+	avatar_url	: {type: String, require: true},
 	userid: String
 })
 
