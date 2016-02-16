@@ -5,19 +5,19 @@ angular
 albumsFactory.$inject = ['$http']
 
 function albumsFactory($http){
-	var postsUrl = 'http://localhost:3000/api/posts'
-	var posts = {}
+	var albumsUrl = 'http://localhost:3000/api/albums'
+	var albums = {}
 
-	posts.list = function(){
-		return $http.get(postsUrl)
+	albums.list = function(){
+		return $http.get(albumsUrl)
 	}
 
-	posts.show = function(postId){
-		return $http.get(postsUrl + '/' + postId)
+	albums.show = function(albumId){
+		return $http.get(albumsUrl + '/' + albumId)
 	}
 
-	posts.addAlbum = function(data){
-		return $http.post(postsUrl, data)
+	albums.addAlbum = function(data){
+		return $http.post(albumsUrl, data)
 	}
 	
 	return posts
