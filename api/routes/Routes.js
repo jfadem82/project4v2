@@ -2,6 +2,7 @@ var express = require('express')
 var apiRouter = express.Router() //get an instance of express router
 var usersController = require('../controllers/usersController')
 var postsController = require('../controllers/postsController')
+var albumsController = require('../controllers/albumsController')
 
 var User = require('../models/User')
 
@@ -38,7 +39,7 @@ apiRouter.route('/users/:user_id')
 	.put(usersController.update) //THIS SHIT DOESNT WORK, ASK ABOUT IT
 	.delete(usersController.destroy) // works in postman
 
-//cars CRUD
+//posts CRUD
 apiRouter.route('/posts')
 	.get(postsController.getAllPosts)
 	.post(postsController.createPost)
@@ -47,5 +48,13 @@ apiRouter.route('/posts/:id')
 	.get(postsController.getOnePost)
 	.patch(postsController.updatePost)
 	.delete(postsController.deletePost)
+
+//albums crud
+apiRouter.route('/albums')
+	.get(albumsController.allAlbums)
+	.post(albumsController.createAlbum)
+
+apiRouter.route('/albums/:id')
+	.get(albumsController.getOneAlbum)
 
 module.exports = apiRouter

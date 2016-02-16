@@ -10,6 +10,7 @@ function allAlbums(req,res){
 }
 
 function createAlbum(req,res){
+	console.log("running createAlbum in back end controller")
 	var newAlbum = new Album
 	newAlbum.userid = req.decoded.userid
 
@@ -24,4 +25,11 @@ function getOneAlbum(req,res){
 		if(err) throw err
 		res.json(album)
 	})
+}
+
+
+module.exports = {
+	allAlbums : allAlbums,
+	createAlbum : createAlbum,
+	getOneAlbum : getOneAlbum
 }

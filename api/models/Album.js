@@ -3,6 +3,7 @@ var
 	Schema = mongoose.Schema
 
 var albumSchema = new Schema({
+	name: String,
 	userid: String
 })
 

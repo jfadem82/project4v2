@@ -43,6 +43,6 @@ function MainRouter($stateProvider, $urlRouterProvider) {
 		.state('album-form', {
 			url: '/album-form',
 			templateUrl: 'partials/album-form.html',
-			controller: 'albumsController as albCTRL'
+			controller: 'AlbumsController as albCTRL'
 		})
 }

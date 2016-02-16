@@ -6,7 +6,7 @@ var express 	= require('express'),
 	port 		= process.env.PORT || 3000,
 	mongoose 	= require('mongoose'),
 	cors 		= require('cors'),
-	apiRouter 	= require('./api/routes/userRoutes')
+	apiRouter 	= require('./api/routes/Routes')
 
 mongoose.connect('mongodb://localhost:27017/project4v2')
 

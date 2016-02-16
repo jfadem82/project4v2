@@ -2,15 +2,9 @@
 <div class="panel panel-default">
 	<div class="panel-heading"><h3 class="panel-title">Create an Album</h3></div>
 	<div class="panel-body">
-		<form id="new-album-form" ng-submit="albCTRL.addAlbum()">
-			<div class="form-group">    
-		    	<input type="text" name="make"  placeholder="Looks" class="form-control">
-		    </div>
+		<form id="new-album-form" ng-submit="albCTRL.addAlbum(albCTRL.newAlbum.name)">
 			<div class="form-group">
-				<input type="text" name="model"  placeholder="Like" class="form-control">
-			</div>
-			<div class="form-group">
-				<input type="number" name="year" placeholder="Form" class="form-control">
+				<input type="text" name="name" ng-model="albCTRL.newAlbum.name" placeholder="Name" class="form-control">
 			</div>
 			<div class="text-center">
 			<button type="submit" class="btn btn-info btn-block">Add Post</button>

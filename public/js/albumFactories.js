@@ -17,8 +17,9 @@ function albumsFactory($http){
 	}
 
 	albums.addAlbum = function(data){
+		console.log("running addAlbum in the factory")
 		return $http.post(albumsUrl, data)
 	}
 	
-	return posts
+	return albums
 }
