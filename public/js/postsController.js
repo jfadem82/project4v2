@@ -25,9 +25,9 @@ function PostsController (postsFactory, $window){
 
 
 
-	vm.addPost = function(make,model,year, avatar_url){
+	vm.addPost = function(memory, date, avatar_url){
 			
-		var data = {make:make, model:model, year:year, avatar_url:avatar_url}
+		var data = {memory:memory, date:date, avatar_url:avatar_url}
 		vm.api.addPost(data)
 			.then(function success(res){
 				vm.posts.push(res.data.post)
