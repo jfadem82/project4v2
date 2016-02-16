@@ -8,9 +8,9 @@ function getAllPosts(req,res){
 
 function createPost(req,res){
 	var newPost = new Post
-	newPost.make = req.body.make
-	newPost.model = req.body.model
-	newPost.year = req.body.year
+	newPost.memory = req.body.memory
+	newPost.date = req.body.date
+	newPost.avatar_url = req.body.avatar_url
 	newPost.userid = req.decoded.userid
 
 	newPost.save(function(err, post){

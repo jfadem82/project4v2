@@ -3,12 +3,12 @@ var
 	Schema = mongoose.Schema
 
 var postSchema = new Schema({
-	photo: 
-	make: String,
-	year: Number,
+	memory: String,
+	date: Number,
+	avatar_url : String,
 	userid: String
 })
 
-var Post = mongoose.mode l('Post', postSchema)
+var Post = mongoose.model('Post', postSchema)
 
 module.exports = Post
