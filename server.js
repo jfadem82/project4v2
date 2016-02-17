@@ -15,7 +15,7 @@ var express 	= require('express'),
 
 
 ////comments
-mongoose.connect('mongodb://localhost:27017/project4v2')
+mongoose.connect('mongodb://localhost:27017/project4DEV')
 
 // set up middleware
 app.use(cors())
