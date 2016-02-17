@@ -12,9 +12,11 @@ function AlbumsController (albumsFactory){
 		.success(function(res){
 			vm.albums = res
 		})
+
 	vm.addAlbum = function(butt, description){
 			console.log("running addAlbum in controller")
 		var data = {name:butt, description:description}
+
 			console.log("data is "  + JSON.stringify(data))
 			
 		vm.api.addAlbum(data)

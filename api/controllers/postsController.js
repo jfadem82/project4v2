@@ -7,11 +7,13 @@ function getAllPosts(req,res){
 }
 
 function createPost(req,res){
+	console.log("inbackend" + JSON.stringify(req.body))
 	var newPost = new Post
 	newPost.description = req.body.description
 	newPost.date = req.body.date
 	newPost.avatar_url = req.body.avatar_url
 	newPost.userid = req.decoded.userid
+	newPost.isPrivate = req.body.isPrivate
 
 	newPost.save(function(err, post){
 		if(err) throw err

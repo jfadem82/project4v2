@@ -7,7 +7,7 @@ function interceptor($httpProvider) {
 }
 
 function MainRouter($stateProvider, $urlRouterProvider) {
-	$urlRouterProvider.otherwise('/login')
+	// $urlRouterProvider.otherwise('/login')
 
 	$stateProvider
 		.state('home', {
@@ -49,5 +49,20 @@ function MainRouter($stateProvider, $urlRouterProvider) {
 			url: '/edit-profile',
 			templateUrl: 'partials/edit-profile.html',
 			controller: 'UsersController as usersCtrl'
+		})	
+		.state('album-detail', {
+			url: '/album-form/:albumId',
+			templateUrl: 'partials/album-detail.html',
+			controller: 'AlbumDetailsController as albDetailsCTRL'
+		})
+		.state('publicposts', {
+			url:'/publicposts',
+			templateUrl: 'partials/publicposts.html',
+			controller: 'PostsController as postsCtrl'
+		})
+		.state('myposts', {
+			url:'/myposts',
+			templateUrl: '/partials/myposts.html',
+			controller: 'jwtController as jwtCtrl'
 		})
 }

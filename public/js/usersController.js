@@ -12,6 +12,8 @@ function UsersController($state, authFactory, $rootScope, $window, $editFactory)
 	vm.login = login
 	vm.logout = logout
 	vm.getUser = getUser
+	vm.userid = {}
+	vm.runthis = authFactory.isLoggedIn()
 	vm.error = null
 
 	$rootScope.$on('$stateChangeStart', function() {
@@ -29,7 +31,11 @@ function UsersController($state, authFactory, $rootScope, $window, $editFactory)
 	function getUser(){
 		authFactory.getUser()
 		.then(function(response){
+			// console.log("response.data is " +JSON.stringify(response.data))
 			vm.user = response.data
+			// console.log("vm.user is " + JSON.stringify(vm.user.userid))
+			vm.userid = vm.user.userid
+			console.log("vm.userid is " + vm.userid)
 		})
 	}
 
@@ -67,3 +73,5 @@ function UsersController($state, authFactory, $rootScope, $window, $editFactory)
 		})
 	}
 }
+
+

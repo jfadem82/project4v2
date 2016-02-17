@@ -2,7 +2,9 @@
 <div class="panel panel-default">
 	<div class="panel-heading"><h3 class="panel-title">Add A New Entry</h3></div>
 	<div class="panel-body">
-		<form id="new-post-form" ng-submit="postsCtrl.addPost(postsCtrl.newPost.description,postsCtrl.newPost.date,postsCtrl.newPost.avatar_url)">
+
+		<form id="new-post-form" ng-submit="postsCtrl.addPost(postsCtrl.newPost.description,postsCtrl.newPost.date,postsCtrl.newPost.avatar_url,postsCtrl.newPost.isPrivate)">
+
 		<input type="file" id="file_input" ng-model="postsCtrl.newPost.avatar_url" ng-click="postsCtrl.sthree()"/>
   			<p id="status">Please select a file</p>
   			<img class="img-responsive"  id="preview" src="" />
@@ -13,6 +15,13 @@
 			<div class="form-group">
 				<input type="number" name="date" ng-model="postsCtrl.newPost.date" placeholder="Year" class="form-control">
 			</div>
+
+			<div>
+				<input type="checkbox" name="isPrivate" ng-model="postsCtrl.newPost.isPrivate">
+				<label>Would you like this post to be private?</label>
+			</div>
+
+<br>
 			<div class="text-center">
 			<button type="submit" class="btn btn-info btn-block">Submit Entry</button>
 			</div>

@@ -6,7 +6,8 @@ var postSchema = new Schema({
 	description: String,
 	date: Number,
 	avatar_url : String,
-	userid: String
+	userid: String,
+	isPrivate: Boolean
 })
 
 var Post = mongoose.model('Post', postSchema)

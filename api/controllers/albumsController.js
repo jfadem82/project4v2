@@ -17,7 +17,7 @@ function createAlbum(req,res){
 
 	newAlbum.save(function(err, album){
 		if(err) throw err
-		res.json({message: "Post Saved!", album: album})
+		res.json({message: "Album Saved!", album: album})
 	})
 }
 
