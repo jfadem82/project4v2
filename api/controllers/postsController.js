@@ -9,7 +9,7 @@ function getAllPosts(req,res){
 function createPost(req,res){
 	console.log("inbackend" + JSON.stringify(req.body))
 	var newPost = new Post
-	newPost.description = req.body.description
+	newPost.memory = req.body.memory
 	newPost.date = req.body.date
 	newPost.avatar_url = req.body.avatar_url
 	newPost.userid = req.decoded.userid
