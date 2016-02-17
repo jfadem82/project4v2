@@ -1,11 +1,12 @@
 angular.module('project4v2')
 	.controller('UsersController', UsersController)
 
-UsersController.$inject = ['$state', 'authFactory', '$rootScope', '$window']
+UsersController.$inject = ['$state', 'authFactory', '$rootScope', '$window', 'editFactory']
 
-function UsersController($state, authFactory, $rootScope, $window) {
+function UsersController($state, authFactory, $rootScope, $window, $editFactory) {
 	var vm = this
 	vm.user = {}
+	vm.api = editFactory
 	vm.loggedIn = null
 	vm.signup = signup
 	vm.login = login
@@ -41,6 +42,18 @@ function UsersController($state, authFactory, $rootScope, $window) {
 				vm.error = response.data.message
 			}
 		})
+	}
+
+	vm.overwrite = function(userId, name, bio){
+		console.log("running overwrite")
+		console.log("userId is " + userId)
+		var data = {name:name, bio:bio}
+		vm.api.updateinfo(userId, data)
+			.success(function (res){
+				console.log(vm.user)
+				console.log(res)
+			})
+		
 	}
 
 	function login(){

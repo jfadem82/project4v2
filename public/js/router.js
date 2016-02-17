@@ -45,4 +45,9 @@ function MainRouter($stateProvider, $urlRouterProvider) {
 			templateUrl: 'partials/album-form.html',
 			controller: 'AlbumsController as albCTRL'
 		})
+		.state('edit-profile', {
+			url: '/edit-profile',
+			templateUrl: 'partials/edit-profile.html',
+			controller: 'UsersController as usersCtrl'
+		})
 }
