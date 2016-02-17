@@ -5,7 +5,7 @@ var
 var postSchema = new Schema({
 	memory: String,
 	date: Number,
-	avatar_url : String,
+	avatar_url : {type: String, required: true},
 	userid: String
 })
 

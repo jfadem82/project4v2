@@ -1,7 +1,7 @@
 module.exports = {
-		'amazonAuth'   :  {
+	'amazonAuth'   :  {
 		'clientID'		:'AKIAI3OUEPNVJZNOLYNQ',
 		'clientSecret'  :'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',
-		'callbackURL'	:'project4v2'
+		'callBackURL'	:'project4v2'
 	},
 };

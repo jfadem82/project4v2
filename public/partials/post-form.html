@@ -7,7 +7,7 @@
 		<input type="file" id="file_input" ng-model="postsCtrl.newPost.avatar_url" ng-click="postsCtrl.sthree()"/>
   			<p id="status">Please select a file</p>
   			<img class="img-responsive"  id="preview" src="" />
-		<input type="hidden" id="avatar_url" name="avatar_url" value="/images/default.png" />
+		<input type="hidden" id="avatar_url" name="avatar_url" ng-model="postsCtrl.newPost.avatar_url" />
 			<div class="form-group">    
 		    	<input type="text" name="memory" ng-model="postsCtrl.newPost.memory" placeholder="Memory" class="form-control">
 		    </div>
