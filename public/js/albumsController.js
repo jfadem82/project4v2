@@ -13,7 +13,7 @@ function AlbumsController (albumsFactory){
 			vm.albums = res
 		})
 	vm.addAlbum = function(name){
-			console.log("running addAlbum in controller")
+			console.log("running addAlbum in albumsController")
 		var data = {name:name}
 			console.log("data is "  + JSON.stringify(data))
 			

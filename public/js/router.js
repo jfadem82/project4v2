@@ -7,7 +7,7 @@ function interceptor($httpProvider) {
 }
 
 function MainRouter($stateProvider, $urlRouterProvider) {
-	$urlRouterProvider.otherwise('/login')
+	// $urlRouterProvider.otherwise('/login')
 
 	$stateProvider
 		.state('home', {
@@ -44,5 +44,10 @@ function MainRouter($stateProvider, $urlRouterProvider) {
 			url: '/album-form',
 			templateUrl: 'partials/album-form.html',
 			controller: 'AlbumsController as albCTRL'
+		})
+		.state('album-detail', {
+			url: '/album-form/:albumId',
+			templateUrl: 'partials/album-detail.html',
+			controller: 'AlbumDetailsController as albDetailsCTRL'
 		})
 }
