@@ -5,7 +5,7 @@ angular
 postsFactory.$inject = ['$http']
 
 function postsFactory($http){
-	var postsUrl = 'http://localhost:3000/api/posts'
+	var postsUrl = 'https://revisit-app.herokuapp.com/api/posts'
 	var posts = {}
 
 	posts.list = function(){

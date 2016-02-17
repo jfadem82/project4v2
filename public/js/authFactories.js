@@ -53,11 +53,11 @@ authFactory.$inject = ['$http', '$q', 'authTokenFactory', '$window']
 function authFactory($http, $q, authTokenFactory, $window){
 	var authFactory = {}
 	authFactory.index = function(){
-		return $http.get('http://localhost:3000/api/users')
+		return $http.get('https://revisit-app.herokuapp.com/api/users')
 	}
 	// handle login
 	authFactory.login = function(email, password){
-		return $http.post('http://localhost:3000/api/authenticate', {
+		return $http.post('https://revisit-app.herokuapp.com/api/authenticate', {
 			email: email,
 			password: password
 		}).then(function(response){
@@ -66,7 +66,7 @@ function authFactory($http, $q, authTokenFactory, $window){
 		})
 	}
 	authFactory.signup = function(email, password, name, bio){
-		return $http.post('http://localhost:3000/api/users', {
+		return $http.post('https://revisit-app.herokuapp.com/api/users', {
 			email: email,
 			password: password,
 			name: name,
@@ -89,7 +89,7 @@ function authFactory($http, $q, authTokenFactory, $window){
 	authFactory.getUser = function(){
 		if(authTokenFactory.getToken()){
 			console.log("token is " + $window.localStorage.getItem('token'))
-			return $http.get('http://localhost:3000/api/me?token=' + $window.localStorage.getItem('token') )
+			return $http.get('https://revisit-app.herokuapp.com/api/me?token=' + $window.localStorage.getItem('token') )
 		} else {
 			return $q.reject({message: 'User has no token'})
 		}
