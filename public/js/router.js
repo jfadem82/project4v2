@@ -58,6 +58,6 @@ function MainRouter($stateProvider, $urlRouterProvider) {
 		.state('myposts', {
 			url:'/myposts',
 			templateUrl: '/partials/myposts.html',
-			controller: 'PostsController as postsCtrl'
+			controller: 'jwtController as jwtCtrl'
 		})
 }

@@ -12,6 +12,7 @@ function UsersController($state, authFactory, $rootScope, $window) {
 	vm.logout = logout
 	vm.getUser = getUser
 	vm.userid = {}
+	vm.runthis = authFactory.isLoggedIn()
 	vm.error = null
 
 	$rootScope.$on('$stateChangeStart', function() {
@@ -59,3 +60,5 @@ function UsersController($state, authFactory, $rootScope, $window) {
 		})
 	}
 }
+
+

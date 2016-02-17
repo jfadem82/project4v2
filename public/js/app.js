@@ -1,4 +1,4 @@
-angular.module('project4v2', ['ui.router'])
+angular.module('project4v2', ['ui.router', 'angular-jwt'])
 	.directive('navBar', navBar)
 	.directive('postForm', postForm)
 
