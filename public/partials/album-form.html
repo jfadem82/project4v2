@@ -2,7 +2,7 @@
 <div class="panel panel-default">
 	<div class="panel-heading"><h3 class="panel-title">Name the Experience</h3></div>
 	<div class="panel-body">
-		<form id="new-album-form" ng-submit="albCTRL.addAlbum(albCTRL.newAlbum.name,albCTRL.newAlbum.posts.description)">
+		<form id="new-album-form" ng-submit="albCTRL.addAlbum(albCTRL.newAlbum.name,albCTRL.newAlbum.posts[0].description)">
 			<div class="form-group">
 				<input type="text" name="name" ng-model="albCTRL.newAlbum.name" placeholder="Name" class="form-control">
 			</div>
@@ -12,7 +12,7 @@
 			<!-- still need to add avatar_url stuff and any other fields -->
 
 			<div class="form-group">    
-		    	<input type="text" name="description" ng-model="albCTRL.newAlbum.posts.description" placeholder="Description" class="form-control">
+		    	<input type="text" name="description" ng-model="albCTRL.newAlbum.posts[0].description" placeholder="Description" class="form-control">
 		    </div>
 		
 
@@ -24,7 +24,6 @@
 		</form>
 	</div>
 </div>
-
 
 
 <!-- <h1>Add Memories to your Experience</h1>
