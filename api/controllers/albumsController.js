@@ -37,7 +37,7 @@ function updateAlbum(req,res){
 		})
 	})
 }
-
+//
 
 module.exports = {
 	allAlbums : allAlbums,
