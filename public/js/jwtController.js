@@ -11,9 +11,9 @@ function jwtController($window, $state, jwtHelper) {
   vm.id = ""
 
   function print(){
-  	console.log(tokenPayload)
-  	console.log(tokenPayload.userid)
+  	// console.log(tokenPayload)
+  	// console.log(tokenPayload.userid)
   	vm.id = tokenPayload.userid
-  	console.log("vm.id is " + vm.id)
+  	// console.log("vm.id is " + vm.id)
   }
 }

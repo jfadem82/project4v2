@@ -15,7 +15,8 @@ function editFactory($http){
 
 	editFactory.updateinfo = function(userId,data){
 		console.log("we in the factory bruh")
-		return $http.patch(usertoeditURL + '/' + userId, data)
+		console.log("factory data is " + JSON.stringify(data))
+		return $http.put(usertoeditURL + '/' + userId, data)
 	}
 
 	return edits

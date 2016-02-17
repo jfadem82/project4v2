@@ -52,8 +52,9 @@ function UsersController($state, authFactory, $rootScope, $window, $editFactory)
 
 	vm.overwrite = function(userId, name, bio){
 		console.log("running overwrite")
-		console.log("userId is " + userId)
+		console.log("bio is " + bio)
 		var data = {name:name, bio:bio}
+		console.log("data is" + JSON.stringify(data))
 		vm.api.updateinfo(userId, data)
 			.success(function (res){
 				console.log(vm.user)
