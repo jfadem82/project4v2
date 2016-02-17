@@ -29,7 +29,7 @@ function getOnePost(req,res){
 }
 
 function updatePost(req,res){
-	Post.findOneAndUpdate({_id: req.params.id}, req.body, function(err,post){
+	Post.findOneAndUpdate({_id: req.params._id}, req.body, function(err,post){
 		if(err) throw err
 		Post.findById(req.params.id, function(err,updatedPost){
 			res.json(updatedPost)
