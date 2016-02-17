@@ -12,11 +12,11 @@ var express 	= require('express'),
 	AWS_ACCESS_KEY 	= process.env.AWS_ACCESS_KEY || auth.amazonAuth.clientID,
 	AWS_SECRET_KEY 	= process.env.AWS_SECRET_KEY || auth.amazonAuth.clientSecret,
 	S3_BUCKET 	 	= process.env.S3_BUCKET || auth.amazonAuth.callBackURL;
-    MongoUri        = process.env.MONGOLAB_URI || 'mongodb://localhost:27017/project4v2'
+    mongoUri        = process.env.MONGOLAB_URI || 'mongodb://localhost:27017/project4v2'
 
 
 ////comments
-mongoose.connect('mongodb://localhost:27017/project4v2')
+mongoose.connect(mongoUri)
 
 // set up middleware
 app.use(cors())
