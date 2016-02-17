@@ -55,4 +55,9 @@ function MainRouter($stateProvider, $urlRouterProvider) {
 			templateUrl: 'partials/publicposts.html',
 			controller: 'PostsController as postsCtrl'
 		})
+		.state('myposts', {
+			url:'/myposts',
+			templateUrl: '/partials/myposts.html',
+			controller: 'PostsController as postsCtrl'
+		})
 }
