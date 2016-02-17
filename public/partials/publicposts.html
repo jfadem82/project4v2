@@ -1,0 +1,13 @@
+<h1>Hello World</h1>
+
+<div class="list-group">
+	<a ng-repeat="post in postsCtrl.posts track by $index" href="#/posts/{{ post._id }}" class="list-group-item">
+	<div ng-if="post.isPrivate != true">
+	<!-- post.isPrivate != true -->
+  		<h3 class="list-group-item-heading">{{ post.memory }} {{ post.date }}</h3>
+  		<p class="list-group-item-text">{{ post.avatar_url }}</p>
+  	</div>
+  	</a>
+</div>
+
+{{1+1}}
