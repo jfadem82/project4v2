@@ -17,6 +17,8 @@ function postsFactory($http){
 	}
 
 	posts.addPost = function(data){
+		console.log("data is " + JSON.stringify(data))
+		
 		return $http.post(postsUrl, data)
 	}
 
