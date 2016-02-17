@@ -8,7 +8,6 @@ var express 	= require('express'),
 	mongoose 	= require('mongoose'),
 	cors 		= require('cors'),
 	apiRouter 	= require('./api/routes/Routes')
-	auth		= require('./config/auth.js')
 	AWS_ACCESS_KEY 	= process.env.AWS_ACCESS_KEY;
 	AWS_SECRET_KEY 	= process.env.AWS_SECRET_KEY;
 	S3_BUCKET 	 	= process.env.S3_BUCKET;
