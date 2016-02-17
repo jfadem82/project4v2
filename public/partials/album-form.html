@@ -1,6 +1,6 @@
-<h1>New Album</h1>
+<h1>New Experience</h1>
 <div class="panel panel-default">
-	<div class="panel-heading"><h3 class="panel-title">Create an Album</h3></div>
+	<div class="panel-heading"><h3 class="panel-title">Name the Experience</h3></div>
 	<div class="panel-body">
 		<form id="new-album-form" ng-submit="albCTRL.addAlbum(albCTRL.newAlbum.name)">
 			<div class="form-group">
@@ -9,7 +9,40 @@
 
 
 			
-HEY
+
+<h1>Add Memories to your Experience</h1>
+<div class="panel panel-default">
+	<div class="panel-heading"><h3 class="panel-title">New Memory</h3></div>
+	<div class="panel-body">
+		<form id="new-post-form" ng-submit="postsCtrl.addPost(postsCtrl.newPost.memory,postsCtrl.newPost.date,postsCtrl.newPost.avatar_url)">
+		<input type="file" id="file_input" ng-model="postsCtrl.newPost.avatar_url" ng-click="postsCtrl.sthree()"/>
+  			<p id="status">Please select a file</p>
+  			<img class="img-responsive"  id="preview" src="" />
+		<input type="hidden" id="avatar_url" name="avatar_url" value="/images/default.png" />
+			<div class="form-group">    
+		    	<input type="text" name="memory" ng-model="postsCtrl.newPost.memory" placeholder="Description" class="form-control">
+		    </div>
+			<div class="form-group">
+				<input type="number" name="date" ng-model="postsCtrl.newPost.date" placeholder="Date" class="form-control">
+			</div>
+			<div class="text-center">
+			<button type="submit" class="btn btn-info btn-block">Add Another Memory</button>
+			</div>
+		</form>
+
+
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -21,5 +54,3 @@ HEY
 	</div>
 </div>
 
-
-<memory-form></memory-form>

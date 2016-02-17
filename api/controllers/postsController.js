@@ -8,7 +8,7 @@ function getAllPosts(req,res){
 
 function createPost(req,res){
 	var newPost = new Post
-	newPost.memory = req.body.memory
+	newPost.description = req.body.description
 	newPost.date = req.body.date
 	newPost.avatar_url = req.body.avatar_url
 	newPost.userid = req.decoded.userid
