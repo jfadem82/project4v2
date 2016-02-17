@@ -7,17 +7,15 @@ var express 	= require('express'),
 	port 		= process.env.PORT || 3000,
 	mongoose 	= require('mongoose'),
 	cors 		= require('cors'),
-	apiRouter 	= require('./api/routes/Routes'),
-	// auth		= require('./config/auth.js'),
+	apiRouter 	= require('./api/routes/Routes')
+	auth		= require('./config/auth.js'),
 	AWS_ACCESS_KEY 	= process.env.AWS_ACCESS_KEY || auth.amazonAuth.clientID,
 	AWS_SECRET_KEY 	= process.env.AWS_SECRET_KEY || auth.amazonAuth.clientSecret,
 	S3_BUCKET 	 	= process.env.S3_BUCKET || auth.amazonAuth.callBackURL;
 
-var mongoUri        = process.env.MONGOLAB_URI || 'mongodb://localhost:27017/project4v2'
-
 
 ////comments
-mongoose.connect(mongoUri)
+mongoose.connect('mongodb://localhost:27017/project4v2')
 
 // set up middleware
 app.use(cors())
@@ -29,7 +27,7 @@ app.use(morgan('dev'))
 
 app.use('/api', apiRouter) // whenever we get a request starting with /api
 
-app.listen(process.env.PORT || 3000)
+app.listen(port)
 console.log("listening on port " + port)
 
 
