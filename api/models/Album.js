@@ -1,6 +1,7 @@
 var
 	mongoose = require('mongoose'),
 	Schema = mongoose.Schema
+	var PostSchema = require('./Post.js').schema;
 
 var albumSchema = new Schema({
 	name: String,

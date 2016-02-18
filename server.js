@@ -14,8 +14,9 @@ var express 	= require('express'),
 	S3_BUCKET 	 	= process.env.S3_BUCKET || auth.amazonAuth.callBackURL;
 
 
+
 ////comments
-mongoose.connect('mongodb://localhost:27017/project4v2')
+mongoose.connect('mongodb://localhost:27017/project4DEV')
 
 // set up middleware
 app.use(cors())

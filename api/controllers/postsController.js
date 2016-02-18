@@ -7,11 +7,14 @@ function getAllPosts(req,res){
 }
 
 function createPost(req,res){
+	console.log("inbackend" + JSON.stringify(req.body))
 	var newPost = new Post
 	newPost.memory = req.body.memory
 	newPost.date = req.body.date
 	newPost.avatar_url = req.body.avatar_url
 	newPost.userid = req.decoded.userid
+	newPost.isPrivate = req.body.isPrivate
+	if (req.body.albumid) newPost.albumid = req.body.albumid
 
 	newPost.save(function(err, post){
 		if(err) throw err
@@ -27,6 +30,7 @@ function getOnePost(req,res){
 }
 
 function updatePost(req,res){
+	console.log("updating post in back end")
 	Post.findOneAndUpdate({_id: req.params.id}, req.body, function(err,post){
 		if(err) throw err
 		Post.findById(req.params.id, function(err,updatedPost){

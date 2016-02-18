@@ -5,10 +5,14 @@ var
 var postSchema = new Schema({
 	memory: String,
 	date: Number,
-	avatar_url : {type: String, required: true},
-	userid: String
+	avatar_url : String,
+	userid: String,
+	albumid: String,
+	isPrivate: Boolean
+
 })
 
 var Post = mongoose.model('Post', postSchema)
 
 module.exports = Post
+//

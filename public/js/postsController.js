@@ -6,7 +6,6 @@ PostsController.$inject = ['postsFactory', '$window']
 
 function PostsController (postsFactory, $window){
 	var vm = this;
-	console.log("posts controller")
 	vm.api = postsFactory
 	vm.posts = []
 	vm.newPost = {}
@@ -18,21 +17,32 @@ function PostsController (postsFactory, $window){
 
 
 
-	vm.addPost = function(memory, date, avatar_url){
-			console.log("running add post")
-			console.log(memory)
-			console.log(date)
-			console.log(avatar_url)
-		var data = {memory:memory, date:date, avatar_url:avatar_url}
+
+	vm.addPost = function(memory, date, avatar_url, isPrivate){
+		console.log(memory)
+		var data = {memory:memory, date:date, avatar_url:avatar_url, isPrivate:isPrivate}
+		
 
 		vm.api.addPost(data)
 			.then(function success(res){
 				vm.posts.push(res.data.post)
 				vm.newPost = {}
 			})
-		
 
 	}
+
+	vm.addAlbumPost = function(albumid, memory, date, avatar_url, isPrivate){
+		console.log("values are " + albumid + memory + date + avatar_url + isPrivate)
+		var data = {albumid:albumid, memory:memory, date:date, avatar_url:avatar_url}
+
+		vm.api.addAlbumPost(data)
+			.then(function success(res){
+				vm.posts.push(res.data.post)
+				vm.newPost = {}
+			})
+	}
+
+
 	vm.uploadFile = function($window){
 
 		function init_upload(){

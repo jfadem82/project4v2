@@ -9,6 +9,7 @@
   "author": "Josh Fadem & Alex Anschuetz",
   "license": "ISC",
   "dependencies": {
+    "angular-jwt": "0.0.9",
     "aws-sdk": "^2.2.35",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.15.0",
