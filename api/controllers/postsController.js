@@ -14,6 +14,7 @@ function createPost(req,res){
 	newPost.avatar_url = req.body.avatar_url
 	newPost.userid = req.decoded.userid
 	newPost.isPrivate = req.body.isPrivate
+	if (req.body.albumid) newPost.albumid = req.body.albumid
 
 	newPost.save(function(err, post){
 		if(err) throw err

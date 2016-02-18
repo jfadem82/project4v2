@@ -7,6 +7,7 @@ var postSchema = new Schema({
 	date: Number,
 	avatar_url : String,
 	userid: String,
+	albumid: String,
 	isPrivate: Boolean
 
 })
@@ -14,3 +15,4 @@ var postSchema = new Schema({
 var Post = mongoose.model('Post', postSchema)
 
 module.exports = Post
+//

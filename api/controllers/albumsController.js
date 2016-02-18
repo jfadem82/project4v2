@@ -37,11 +37,19 @@ function updateAlbum(req,res){
 		})
 	})
 }
+
+function deleteAlbum(req,res){
+	Album.findOneAndRemove({_id: req.params.id}, req.body, function(err,post){
+		if(err) throw err
+		res.json({message:"album deleted!"})
+	})
+}
 //
 
 module.exports = {
 	allAlbums : allAlbums,
 	createAlbum : createAlbum,
 	getOneAlbum : getOneAlbum,
-	updateAlbum : updateAlbum
+	updateAlbum : updateAlbum,
+	deleteAlbum : deleteAlbum
 }

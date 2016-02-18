@@ -57,6 +57,7 @@ apiRouter.route('/albums')
 apiRouter.route('/albums/:id')
 	.get(albumsController.getOneAlbum)
 	.put(albumsController.updateAlbum)
+	.delete(albumsController.deleteAlbum)
 
 module.exports = apiRouter
 

@@ -68,12 +68,17 @@
 </div> -->
 
 
-<h2>All Albums:</h2>
+<h2>My Albums:</h2>
 
 <div class="list-group">
-	<a ng-repeat="album in albCTRL.albums track by $index" href="#/album-form/{{ album._id }}" class="list-group-item">
-  		<h3 class="list-group-item-heading">{{ album._id }}</h3>
-  		
-  	</a>
+	<div ng-controller="jwtController as jwtCtrl">
+	{{jwtCtrl.print()}}
+		<a ng-repeat="album in albCTRL.albums track by $index" ng-if="album.userid == jwtCtrl.id" href="#/album-form/{{ album._id }}" class="list-group-item">
+  			<h3 class="list-group-item-heading">Album ID {{ album._id }}</h3>
+  			<h1>Click </h1>
+  			<h3 class="list-group-item-heading">{{ album.name }}</h3>
+  			<h3 class="list-group-item-heading">USERID {{ album.userid }}</h3>
+  		</a>
+  	</div>
 </div>
 

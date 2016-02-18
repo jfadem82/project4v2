@@ -28,9 +28,21 @@ function PostsController (postsFactory, $window){
 				vm.posts.push(res.data.post)
 				vm.newPost = {}
 			})
-		
 
 	}
+
+	vm.addAlbumPost = function(albumid, memory, date, avatar_url, isPrivate){
+		console.log("values are " + albumid + memory + date + avatar_url + isPrivate)
+		var data = {albumid:albumid, memory:memory, date:date, avatar_url:avatar_url}
+
+		vm.api.addAlbumPost(data)
+			.then(function success(res){
+				vm.posts.push(res.data.post)
+				vm.newPost = {}
+			})
+	}
+
+
 	vm.uploadFile = function($window){
 
 		function init_upload(){
