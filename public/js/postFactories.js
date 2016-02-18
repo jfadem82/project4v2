@@ -22,6 +22,12 @@ function postsFactory($http){
 		return $http.post(postsUrl, data)
 	}
 
+	posts.addAlbumPost = function(data){
+		console.log("data is " + JSON.stringify(data))
+
+		return $http.post(postsUrl, data)
+	}
+
 	posts.updatePost = function(postId,data){
 		console.log("factory data is " + JSON.stringify(data))
 		return $http.patch(postsUrl + '/' + postId, data)
