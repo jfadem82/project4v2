@@ -4,7 +4,7 @@
         <div >
             <div >
               <h1> <strong><span >ReVisit</span></strong></h1>
-                <p class="lead">A Digital Diary to <strong> revisit your experiences</strong> and <strong>document your story</strong></p>
+                <p class="lead">A Digital Diary to revisit other times and places in your life</p>
             </div>
         </div>
     </div>
@@ -14,9 +14,7 @@
 		<a class="thumbnail setHeight"  href="#/posts/{{ post._id }}" class="list-group-item">
 	
 	<!-- post.isPrivate != true -->
-  			<h3>{{ post.memory }} {{ post.date }}</h3>
-  			<p>{{ post.avatar_url }}</p>
-  	
+  		  <img src="{{ post.avatar_url }}">
   		</a>
   	</div>
 </div>

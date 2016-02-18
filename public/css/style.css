@@ -1,3 +1,13 @@
 .setHeight {
 	height: 300px;
+	border-width: 0px;
+}
+
+#memoryDescription {
+	text-align: center;
+}
+
+.setPhoto {
+	width:360px
+	height: 100%;
 }
