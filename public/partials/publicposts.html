@@ -1,11 +1,22 @@
-<h1>Hello World</h1>
 
-<div class="list-group">
-	<a ng-repeat="post in postsCtrl.posts track by $index" ng-if="post.isPrivate != true" href="#/posts/{{ post._id }}" class="list-group-item">
-	<div>
+
+<div  class="text-center">
+        <div >
+            <div >
+              <h1> <strong><span >ReVisit</span></strong></h1>
+                <p class="lead">A Digital Diary to <strong> revisit your experiences</strong> and <strong>document your story</strong></p>
+            </div>
+        </div>
+    </div>
+
+<div class="row">
+	<div class="col-xs-6 col-md-4" ng-repeat="post in postsCtrl.posts track by $index" ng-if="post.isPrivate != true">
+		<a class="thumbnail setHeight"  href="#/posts/{{ post._id }}" class="list-group-item">
+	
 	<!-- post.isPrivate != true -->
-  		<h3 class="list-group-item-heading">{{ post.memory }} {{ post.date }}</h3>
-  		<p class="list-group-item-text">{{ post.avatar_url }}</p>
+  			<h3>{{ post.memory }} {{ post.date }}</h3>
+  			<p>{{ post.avatar_url }}</p>
+  	
+  		</a>
   	</div>
-  	</a>
 </div>
