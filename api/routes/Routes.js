@@ -36,7 +36,7 @@ apiRouter.route('/me')
 //user CRUD
 apiRouter.route('/users/:user_id')
 	.get(usersController.show) //works in postman
-	.put(usersController.update) //THIS SHIT DOESNT WORK, ASK ABOUT IT
+	.put(usersController.update) //works in postman
 	.delete(usersController.destroy) // works in postman
 
 //posts CRUD
@@ -56,5 +56,8 @@ apiRouter.route('/albums')
 
 apiRouter.route('/albums/:id')
 	.get(albumsController.getOneAlbum)
+	.put(albumsController.updateAlbum)
 
 module.exports = apiRouter
+
+
