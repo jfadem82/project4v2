@@ -5,7 +5,9 @@ var
 
 var albumSchema = new Schema({
 	name: String,
-	userid: String
+	userid: String,
+	posts: [PostSchema],
+	avatar_url: String
 })
 
 var Album = mongoose.model('Album', albumSchema)

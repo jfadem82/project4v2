@@ -1,9 +1,9 @@
 angular.module('project4v2')
 	.controller('AlbumDetailsController', AlbumDetailsController)
 
-AlbumDetailsController.$inject = ['albumsFactory','$stateParams','$location']
+AlbumDetailsController.$inject = ['albumsFactory','$stateParams','$location', '$sce']
 
-function AlbumDetailsController(albumsFactory,$stateParams,$location){
+function AlbumDetailsController(albumsFactory,$stateParams,$location,$sce){
 	var vm = this
 	vm.name = 'Album Detail'
 	vm.api = albumsFactory
@@ -22,5 +22,15 @@ function AlbumDetailsController(albumsFactory,$stateParams,$location){
 			$location.path('/album-form')
 		})
 	}
-
+	vm.trustSrc = function(src){
+		return $sce.trustAsResourceUrl(src);
+	}
 }
+
+
+
+
+
+
+
+
