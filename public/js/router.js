@@ -7,7 +7,7 @@ function interceptor($httpProvider) {
 }
 
 function MainRouter($stateProvider, $urlRouterProvider) {
-	// $urlRouterProvider.otherwise('/login')
+	$urlRouterProvider.otherwise('/login')
 
 	$stateProvider
 		.state('home', {
