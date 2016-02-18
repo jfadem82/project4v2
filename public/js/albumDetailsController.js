@@ -16,4 +16,11 @@ function AlbumDetailsController(albumsFactory,$stateParams,$location){
 	}
 	vm.showAlbum($stateParams.albumId)
 
+	vm.removePost = function(albumId){
+		vm.api.removePost(albumId).success(function(response){
+			console.log(response)
+			$location.path('/album-form')
+		})
+	}
+
 }

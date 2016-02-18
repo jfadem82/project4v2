@@ -21,5 +21,9 @@ function albumsFactory($http){
 		return $http.post(albumsUrl, data)
 	}
 	
+	albums.removePost = function(albumId){
+		return $http.delete(albumsUrl + '/' + albumId)
+	}
+
 	return albums
 }
