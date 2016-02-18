@@ -10,30 +10,25 @@
 	</div>
 <button class="btn btn-danger btn-block" ng-click="albDetailsCTRL.removePost(albDetailsCTRL.album._id)">DELETE THIS ALBUM</button>
 
+		<h1><strong>ID</strong>:{{ albDetailsCTRL.album._id }}</h1>
+		<h1><strong>Name</strong>:{{ albDetailsCTRL.album.name }}</h1>
+
+<iframe src="{{albDetailsCTRL.trustSrc(albDetailsCTRL.album.avatar_url)}}" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+
 <h1>BREAK</h1>
 <div class="list-group">
 	
 		<div ng-controller="PostsController as postsCtrl">
-		
-
 			<a ng-repeat="post in postsCtrl.posts track by $index" ng-if="post.albumid == albDetailsCTRL.album._id" href="#/posts/{{ post._id }}" class="list-group-item">
 	
 				<div>
-
   					<h3 class="list-group-item-heading">{{ post.memory }}</h3>
   					<h3>post's albumid {{ post.albumid }}</h3>
-  					<h3> this albums id {{ albDetailsCTRL.album._id }}</h3>
-  					
+  					<h3> this albums id {{ albDetailsCTRL.album._id }}</h3>  					
   				</div>
-
-  			</a>
-  
-  		</div>
-  		
+  			</a>  
+  		</div>  		
 </div>
-
-
-
 
 <h1>Add Memory to this Album</h1>
 <div class="panel panel-default">
