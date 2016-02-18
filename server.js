@@ -15,8 +15,11 @@ var express 	= require('express'),
     mongoUri        = process.env.MONGOLAB_URI || 'mongodb://localhost:27017/project4v2'
 
 
+
 ////comments
+
 mongoose.connect(mongoUri)
+
 
 // set up middleware
 app.use(cors())
