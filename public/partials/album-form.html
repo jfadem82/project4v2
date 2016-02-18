@@ -22,58 +22,16 @@
 </div>
 
 
-
-<!-- <h1>Add Memories to your Experience</h1>
-<div class="panel panel-default">
-	<div class="panel-heading"><h3 class="panel-title">New Memory</h3></div>
-	<div class="panel-body">
-		<form id="new-post-form" ng-submit="postsCtrl.addPost(postsCtrl.newPost.memory,postsCtrl.newPost.date,postsCtrl.newPost.avatar_url)">
-
-
-
-		<input type="file" id="file_input" ng-model="postsCtrl.newPost.avatar_url" ng-click="postsCtrl.sthree()"/>
-  			<p id="status">Please select a file</p>
-  			<img class="img-responsive"  id="preview" src="" />
-		<input type="hidden" id="avatar_url" name="avatar_url" value="/images/default.png" />
-			<div class="form-group">    
-		    	<input type="text" name="memory" ng-model="postsCtrl.newPost.memory" placeholder="Description" class="form-control">
-		    </div>
-			<div class="form-group">
-				<input type="number" name="date" ng-model="postsCtrl.newPost.date" placeholder="Date" class="form-control">
-			</div>
-
-
-
-
-			<div class="text-center">
-			<button type="submit" class="btn btn-info btn-block">Add Another Memory</button>
-			</div>
-		</form>
-
-
-	</div>
-</div> -->
-
-<!-- <h2 ng-show="postsCtrl.posts.length">All Memories:</h2>
-
-<div class="list-group">
-	<a ng-repeat="post in postsCtrl.posts track by $index" href="#/posts/{{ post._id }}" class="list-group-item">
-  		<h3 class="list-group-item-heading">{{ post.memory }} {{ post.date }}</h3>
-  		<p class="list-group-item-text">{{ post.avatar_url }}</p>
-  	</a>
-</div> -->
-
-
 <h2>My Albums:</h2>
 
 <div class="list-group">
 	<div ng-controller="jwtController as jwtCtrl">
 	{{jwtCtrl.print()}}
 		<a ng-repeat="album in albCTRL.albums track by $index" ng-if="album.userid == jwtCtrl.id" href="#/album-form/{{ album._id }}" class="list-group-item">
-  			<h3 class="list-group-item-heading">Album ID {{ album._id }}</h3>
-  			<h1>Click </h1>
-  			<h3 class="list-group-item-heading">{{ album.name }}</h3>
-  			<h3 class="list-group-item-heading">USERID {{ album.userid }}</h3>
+  			<!-- <h3 class="list-group-item-heading">Album ID {{ album._id }}</h3> -->
+  			<h3>Click </h3>
+  			<h1 class="list-group-item-heading">{{ album.name }}</h1>
+  			<!-- <h3 class="list-group-item-heading">USERID {{ album.userid }}</h3> -->
   		</a>
   	</div>
 </div>

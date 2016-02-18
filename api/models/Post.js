@@ -8,6 +8,8 @@ var postSchema = new Schema({
 	avatar_url : String,
 	userid: String,
 	albumid: String,
+	userbio: String,
+	username: String,
 	isPrivate: Boolean
 
 })

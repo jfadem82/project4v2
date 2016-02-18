@@ -44,21 +44,22 @@
 {{jwtCtrl.print()}}
 <div class="list-group">
 	
-		<div ng-controller="PostsController as postsCtrl">
+		<div class="row" ng-controller="PostsController as postsCtrl">
 		
+		<div class="col-xs-6 col-md-4" ng-repeat="post in postsCtrl.posts track by $index" ng-if="post.userid == jwtCtrl.id">
 
-			<a ng-repeat="post in postsCtrl.posts track by $index" ng-if="post.userid == jwtCtrl.id" href="#/posts/{{ post._id }}" class="list-group-item">
+			<a class="thumbnail setHeight" href="#/posts/{{ post._id }}" class="list-group-item">
 	
-				<div>
+			
 
   					<h3 class="list-group-item-heading">{{ post.memory }}</h3>
   					<h3>{{ post.userid }}</h3>
   					<h3> {{ jwtCtrl.id }}</h3>
   					
-  				</div>
+  				
 
   			</a>
-  
+  		</div>
   		</div>
   		
 </div>
