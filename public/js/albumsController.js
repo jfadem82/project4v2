@@ -1,9 +1,9 @@
 angular.module('project4v2')
 	.controller('AlbumsController', AlbumsController)
 
-AlbumsController.$inject = ['albumsFactory', '$window']
+AlbumsController.$inject = ['albumsFactory', '$window', '$sce']
 
-function AlbumsController (albumsFactory, $window){
+function AlbumsController (albumsFactory, $window, $sce){
 	var vm = this;
 	vm.api = albumsFactory
 	vm.albums = []
@@ -26,6 +26,9 @@ function AlbumsController (albumsFactory, $window){
 				vm.albums.push(res.data.album)
 				vm.newAlbum = {}
 			})
+	}
+	vm.trustSrc = function(src){
+		return $sce.trustAsResourceUrl(src);
 	}
 		vm.uploadFile = function($window){
 
@@ -53,7 +56,6 @@ function AlbumsController (albumsFactory, $window){
 			xhr.onload = function() {
 			  if (xhr.status === 200) {
 			      document.getElementById("audio-preview").src = url;            
-			      document.getElementById("song-preview").value = url;
 			      vm.newAlbum.avatar_url = url
 			  }
 			};

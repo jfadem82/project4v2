@@ -12,10 +12,8 @@
 			<!-- still need to add avatar_url stuff and any other fields -->
 		<input type="file" id="file_input" ng-model="albCTRL.newAlbum.avatar_url" ng-click="albCTRL.sthree()"/>
 			<p id="status">Please select a file</p>
-  				<audio controls>
-  					<source id="audio-preview" src="" type="audio/mp3">
-  				</audio>
-					<input type="hidden" id="song-preview" name="avatar_url" ng-model="albCTRL.newAlbum.avatar_url" />
+				<iframe id="audio-preview" src="{{albDetailsCTRL.trustSrc(albCTRL.newAlbum.avatar_url)}}" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+<!-- 					<input type="hidden" id="song-preview" name="avatar_url" ng-model="albCTRL.newAlbum.avatar_url" /> -->
 			<div class="text-center">
 			<button type="submit" class="btn btn-info btn-block">Create Album</button>
 			</div>
