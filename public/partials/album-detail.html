@@ -5,15 +5,34 @@
 		<h3 class="panel-title">Show Album:</h3>
 	</div>
 	<div class="panel-body">
-	  	<audio controls>
-  			<source id="audio-preview" src="{{albDetailsCTRL.album.avatar_url}}" type="audio/mpeg", "audio/mp3", "audio/m4a">
-  		</audio>
+
+		<!-- <audio controls>
+ 			<source src="{{albDetailsCTRL.trustSrc(albDetailsCTRL.album.avatar_url)}}" type="audio/mpeg">
+		</audio> -->
+
+	  	<!-- <audio controls>
+  			<source id="audio-preview" src="{{albDetailsCTRL.trustSrc(albDetailsCTRL.album.avatar_url)}}" type="audio/mpeg", "audio/mp3", "audio/m4a">
+  		</audio> -->
 		<h1><strong>ID</strong>:{{ albDetailsCTRL.album._id }}</h1>
 		<h1><strong>Name</strong>:{{ albDetailsCTRL.album.name }}</h1>
-	</div>
+		<!-- {{albDetailsCTRL.album.avatar_url}} -->
+
+		<h1> {{albDetailsCTRL.trustSrc(albDetailsCTRL.album.avatar_url)}}</h1>
+
+<!-- 
+		<audio controls>
+ 			<source src="https://project4v2.s3.amazonaws.com/All I Need (radiohead) [Mp3g.lu].mp3" type="audio/mpeg">
+		</audio> -->
+
+<!-- 		<audio>
+			<source type="audio/mpeg" src="https://project4v2.s3.amazonaws.com/All I Need (radiohead) [Mp3g.lu].mp3">
+		</audio>
+	</div> -->
 
 
-<iframe src="" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+<iframe src="{{albDetailsCTRL.trustSrc(albDetailsCTRL.album.avatar_url)}}" width="100" height="200" frameborder="0" allowtransparency="true"></iframe>
+
+
 
 <br><br>
 here is where you can enter spotify link
