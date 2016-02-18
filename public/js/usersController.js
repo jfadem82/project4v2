@@ -67,7 +67,7 @@ function UsersController($state, authFactory, $rootScope, $window, $editFactory)
 		authFactory.login(vm.user.email, vm.user.password)
 		.then(function(response){
 			if(response.data.success){
-				$state.go("posts")
+				$state.go("publicposts")
 			} else {
 				vm.error = response.data.message
 			}

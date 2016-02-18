@@ -2,7 +2,7 @@
 
 <post-form></post-form>
 
-<h2 ng-show="postsCtrl.posts.length">All Memories:</h2>
+<h2 ng-show="postsCtrl.posts.length">All Entries:</h2>
 
 <div class="list-group">
 	<a ng-repeat="post in postsCtrl.posts track by $index" href="#/posts/{{ post._id }}" class="list-group-item">

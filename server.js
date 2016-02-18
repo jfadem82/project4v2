@@ -7,11 +7,10 @@ var express 	= require('express'),
 	port 		= process.env.PORT || 3000,
 	mongoose 	= require('mongoose'),
 	cors 		= require('cors'),
-	apiRouter 	= require('./api/routes/Routes')
-	auth		= require('./config/auth.js'),
-	AWS_ACCESS_KEY 	= process.env.AWS_ACCESS_KEY || auth.amazonAuth.clientID,
-	AWS_SECRET_KEY 	= process.env.AWS_SECRET_KEY || auth.amazonAuth.clientSecret,
-	S3_BUCKET 	 	= process.env.S3_BUCKET || auth.amazonAuth.callBackURL;
+	apiRouter 	= require('./api/routes/Routes'),
+	// AWS_ACCESS_KEY 	= process.env.AWS_ACCESS_KEY || auth.amazonAuth.clientID,
+	// AWS_SECRET_KEY 	= process.env.AWS_SECRET_KEY || auth.amazonAuth.clientSecret,
+	// S3_BUCKET 	 	= process.env.S3_BUCKET || auth.amazonAuth.callBackURL;
 
 
 
