@@ -10,6 +10,7 @@ function PostDetailsController(postsFactory,$stateParams,$location){
 	vm.post = null
 	vm.editing = false
 	vm.showPost = function(postId){
+		console.log("post id is " + postId)
 		vm.api.show(postId).success(function(response){
 			vm.post = response
 			console.log(response)
