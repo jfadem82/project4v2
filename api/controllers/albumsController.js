@@ -14,6 +14,7 @@ function createAlbum(req,res){
 	var newAlbum = new Album
 	newAlbum.name = req.body.name
 	newAlbum.userid = req.decoded.userid
+	newAlbum.avatar_url = req.body.avatar_url
 
 	newAlbum.save(function(err, album){
 		if(err) throw err
