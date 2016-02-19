@@ -34,9 +34,10 @@
 }
 
 .fix-width {
-  width:500px;
-  margin-left: 325px;
-
+  /*width:500px;
+  margin-left: 325px;*/
+  margin: auto;
+  width: 100%;
 }
 
 .min-width {
