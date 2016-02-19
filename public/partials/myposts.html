@@ -39,7 +39,7 @@
 	
 		<div class="row" ng-controller="PostsController as postsCtrl">
 		
-		<div class="col-xs-6 col-md-4" ng-repeat="post in postsCtrl.posts track by $index" ng-if="post.userid == jwtCtrl.id">
+		<div class="col-xs-6 col-md-4" ng-repeat="post in postsCtrl.posts | orderBy:'-_id'" ng-if="post.userid == jwtCtrl.id">
 
 				<span class="thumbnail setHeight" class="list-group-item" style="display:table-cell;vertical-align:middle;width:328px;">
 					<div style="margin-left:auto;margin-right:auto;">

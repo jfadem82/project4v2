@@ -41,7 +41,7 @@
 	
 		<div class="row" ng-controller="PostsController as postsCtrl">
 
-		<div class="col-xs-6 col-md-4" ng-repeat="post in postsCtrl.posts track by $index" ng-if="post.albumid == albDetailsCTRL.album._id">
+		<div class="col-xs-6 col-md-4" ng-repeat="post in postsCtrl.posts | orderBy:'-_id'" ng-if="post.albumid == albDetailsCTRL.album._id">
 			
 			<span class="thumbnail setHeight" class="list-group-item" style="display:table-cell;vertical-align:middle;width:328px;">
 				
@@ -50,6 +50,7 @@
   					<span id="center-text">	<h4 id="memoryDescription" >{{ post.memory }}</h4> </span>
 					<h6>{{ post.username }} </h6>
 					<h6>{{ post.date }}</h6>
+					<h6>{{post._id}}</h6>
 
 			
 					
