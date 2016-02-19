@@ -34,8 +34,16 @@
 
 .fix-width {
   width:500px;
-  margin-left: 320px;
+  margin-left: 230px;
 
 }
+
+.min-width {
+  width:150px;
+  margin-left: 230px;
+display: block;
+
+}
+
 
 
