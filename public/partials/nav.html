@@ -5,9 +5,9 @@
 		<a class="navbar-brand" ui-sref="home">ReVisit</a>
 	</div>
 		<ul class="nav navbar-nav navbar-right">
-			<li ng-if="usersCtrl.loggedIn"><a>Hi {{usersCtrl.user.email}}</a></li>
+			<li ng-if="usersCtrl.loggedIn"><a>Hi {{usersCtrl.user.name}}</a></li>
 			<li ng-if="usersCtrl.loggedIn"><a ui-sref="publicposts">Public Entries</a></li> 
-			<li ng-if="usersCtrl.loggedIn"><a ui-sref="album-form">My Experiences</a></li>
+			<li ng-if="usersCtrl.loggedIn"><a ui-sref="album-form">My Chapters</a></li>
 			<li ng-if="usersCtrl.loggedIn"><a ui-sref="myposts">My Entries</a></li>
 			<li ng-if="!usersCtrl.loggedIn"><a ui-sref="login">Login</a></li>
 			<li ng-if="!usersCtrl.loggedIn"><a ui-sref="signup">Sign up	</a></li>
@@ -16,3 +16,7 @@
 		</div>
 	</nav>
 </div>
+
+
+
+

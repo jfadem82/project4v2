@@ -1,17 +1,41 @@
 .setHeight {
-	height: 300px;
+	height: 490px;
 	border-width: 0px;
 }
 
-#memoryDescription {
+#center-text{
 	text-align: center;
 }
 
-.setPhoto {
-	width:360px
-	height: 100%;
+.center-posts {
+	/*text-align: center;*/
 }
 
-#playur {
-	background-color: white;
+#hide-panel {
+	border-width: 0px;
+	
 }
+
+.body {
+  background-color: #333333;
+}
+
+.carousel-content {
+    color:black;
+    display:flex;
+    align-items:center;
+}
+
+#text-carousel {
+  width: 100%;
+  height: auto;
+  padding: 50px;
+}
+
+.fix-width {
+  width:500px;
+  margin-left: 320px;
+
+}
+
+
