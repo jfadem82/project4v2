@@ -1,80 +1,24 @@
 <div class="panel panel-default">
-	<div class="panel-heading">
-		<h3 class="panel-title">Show Album:</h3>
-	</div>
-	<div class="panel-body">
-		<!-- <h1><strong>ID</strong>:this albums id {{ albDetailsCTRL.album._id }}</h1> -->
-		<h1>{{ albDetailsCTRL.album.name }}</h1>
-	</div>
-<button class="btn btn-danger btn-block" ng-click="albDetailsCTRL.removePost(albDetailsCTRL.album._id)">DELETE THIS ALBUM</button>
-
-
-
-
-
-
-//this is the one your trying to get working
-<div class="list-group">
 	
-		<div class="row" ng-controller="PostsController as postsCtrl">
-
-		<div class="col-xs-6 col-md-4" ng-repeat="post in postsCtrl.posts track by $index" ng-if="post.albumid == albDetailsCTRL.album._id">
-			
-			<a class="thumbnail setHeight" href="#/posts/{{ post._id }}" class="list-group-item">
 	
-				<div>
-				
-  					<h3 class="list-group-item-heading">{{ post.memory }}</h3>
-  					<!-- <h3>post's albumid {{ post.albumid }}</h3>
-  					<h3> this albums id {{ albDetailsCTRL.album._id }}</h3>  --> 					
-  				</div>
-  			</a>  
-  			</div>
-  		</div>  		
-</div>
-
-<div class="list-group">
-	
-		<div class="row" ng-controller="PostsController as postsCtrl">
-		
-		<div class="col-xs-6 col-md-4" ng-repeat="post in postsCtrl.posts track by $index" ng-if="post.userid == jwtCtrl.id">
-
-			<a class="thumbnail setHeight" href="#/posts/{{ post._id }}" class="list-group-item">
-	
-			
-
-  				<!-- 	<h3 class="list-group-item-heading">{{ post.memory }}</h3>
-  					<h3>{{ post.userid }}</h3>
-  					<h3> {{ jwtCtrl.id }}</h3> -->
-  					<img class="img-responsive" id="flocka" src="{{post.avatar_url}}" />
-  				</a>
-  		</div>
-  		</div>
-</div>
+		<h1>&nbsp;{{ albDetailsCTRL.album.name }}</h1>
 
 
-
-
-
-
-
-
-<h1>Add Memory to this Album</h1>
 <div class="panel panel-default">
-	<div class="panel-heading"><h3 class="panel-title">Add A New Entry</h3></div>
+	<div class="panel-heading"><h3 class="panel-title">Add An Entry to this Experience</h3></div>
 	<div ng-controller="PostsController as postsCtrl" class="panel-body">
 
 		<form id="new-post-form" ng-submit="postsCtrl.addAlbumPost(albDetailsCTRL.album._id, postsCtrl.newPost.memory,postsCtrl.newPost.date,postsCtrl.newPost.avatar_url,postsCtrl.newPost.isPrivate)">
 
 		<input type="file" id="file_input" ng-model="postsCtrl.newPost.avatar_url" ng-click="postsCtrl.sthree()"/>
-  			<p id="status">Please select a file</p>
+  			<p id="status">Select a song that reminds you of this Experience</p>
   			<img class="img-responsive"  id="preview" src="" />
 		<input type="hidden" id="avatar_url" name="avatar_url" ng-model="postsCtrl.newPost.avatar_url" />
 			<div class="form-group">    
-		    	<input type="text" name="memory" ng-model="postsCtrl.newPost.memory" placeholder="Memory" class="form-control">
+		    	<input type="text" name="memory" ng-model="postsCtrl.newPost.memory" placeholder="Description" class="form-control">
 		    </div>
 			<div class="form-group">
-				<input type="number" name="date" ng-model="postsCtrl.newPost.date" placeholder="Year" class="form-control">
+				<input type="text" name="date" ng-model="postsCtrl.newPost.date" placeholder="Date" class="form-control">
 			</div>
 
 			<div>
@@ -82,14 +26,40 @@
 				<label>Would you like this post to be private?</label>
 			</div>
 
-<br>
+
 			<div class="text-center">
-			<button type="submit" onclick="window.location.reload()" class="btn btn-info btn-block">Submit Entry</button>
+			<button type="submit" onclick="window.location.reload()" class="btn btn-info btn-block">Submit </button>
 			</div>
 		</form>
 	</div>
 </div>
 
 
+<div class="list-group">
+	
+		<div class="row" ng-controller="PostsController as postsCtrl">
+
+		<div class="col-xs-6 col-md-4" ng-repeat="post in postsCtrl.posts track by $index" ng-if="post.albumid == albDetailsCTRL.album._id">
+			
+			<span class="thumbnail setHeight" class="list-group-item" style="display:table-cell;vertical-align:middle;width:328px;height:550px;">
+				
+				<div class="center-posts" style="margin-left:auto;margin-right:auto;">		
+  					<img class="img-responsive" id="flocka" src="{{post.avatar_url}}" />
+  					<span id="center-text">	<h4 id="memoryDescription" >{{ post.memory }}</h4> </span>
+					<h6>{{ post.username }} </h6>
+					<h6>{{ post.date }}</h6>	
+  				</div>
+
+  			</span>  
+  			</div>
+  		</div>  		
+</div>
+
+
+
+<br><br><br>
+
+<button class="btn btn-danger btn-block" ng-click="albDetailsCTRL.removePost(albDetailsCTRL.album._id)">DELETE THIS ALBUM</button>
+<br>
 <iframe id="playur" src="{{albDetailsCTRL.trustSrc(albDetailsCTRL.album.avatar_url)}}" width="300" height="70" frameborder="0" allowtransparency="true"></iframe>
 

@@ -4,7 +4,7 @@ var
 
 var postSchema = new Schema({
 	memory: String,
-	date: Number,
+	date: String,
 	avatar_url : String,
 	userid: String,
 	albumid: String,

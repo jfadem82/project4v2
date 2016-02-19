@@ -1,17 +1,25 @@
 .setHeight {
-	height: 300px;
+	height: 550px;
 	border-width: 0px;
+	
+	
+	
+	
+
 }
 
-#memoryDescription {
+#center-text{
 	text-align: center;
 }
 
-.setPhoto {
-	width:360px
-	height: 100%;
+.center-posts {
+	/*text-align: center;*/
+
+
+
 }
 
-#playur {
-	background-color: white;
-}
+/*.setPhoto {
+	width:360px
+	height: 100%;
+}*/
