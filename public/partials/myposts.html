@@ -1,36 +1,58 @@
+<h1>New Entry</h1>
+<div ng-controller="PostsController as postsCtrl" class="panel panel-default">
+	<div class="panel-heading"><h3 class="panel-title">Add A New Entry</h3></div>
+	<div class="panel-body">
+
+		<form id="new-post-form" ng-submit="postsCtrl.addPost(postsCtrl.newPost.memory,postsCtrl.newPost.date,postsCtrl.newPost.avatar_url,postsCtrl.newPost.isPrivate)">
+
+		<input type="file" id="file_input" ng-model="postsCtrl.newPost.avatar_url" ng-click="postsCtrl.sthree()"/>
+  			<p id="status">Please select a file</p>
+  			<img class="img-responsive"  id="preview" src="" />
+		<input type="hidden" id="avatar_url" name="avatar_url" ng-model="postsCtrl.newPost.avatar_url" />
+			<div class="form-group">    
+		    	<input type="text" name="memory" ng-model="postsCtrl.newPost.memory" placeholder="Memory" class="form-control">
+		    </div>
+			<div class="form-group">
+				<input type="number" name="date" ng-model="postsCtrl.newPost.date" placeholder="Year" class="form-control">
+			</div>
+
+			<div>
+				<input type="checkbox" name="isPrivate" ng-model="postsCtrl.newPost.isPrivate">
+				<label>Would you like this entry to be private?</label>
+			</div>
+
+<br>
+			<div class="text-center">
+			<button type="submit" onclick="window.location.reload()" class="btn btn-info btn-block">Submit Entry</button>
+			</div>
+		</form>
+	</div>
+</div>
+
+
+
+
 <h1>My Posts</h1>
 {{jwtCtrl.print()}}
 <div class="list-group">
 	
-		<div ng-controller="PostsController as postsCtrl">
+		<div class="row" ng-controller="PostsController as postsCtrl">
 		
+		<div class="col-xs-6 col-md-4" ng-repeat="post in postsCtrl.posts track by $index" ng-if="post.userid == jwtCtrl.id">
 
-			<a ng-repeat="post in postsCtrl.posts track by $index" ng-if="post.userid == jwtCtrl.id" href="#/posts/{{ post._id }}" class="list-group-item">
+			<a class="thumbnail setHeight" href="#/posts/{{ post._id }}" class="list-group-item">
 	
-				<div>
+			
 
-  					<h3 class="list-group-item-heading">{{ post.memory }}</h3>
+  				<!-- 	<h3 class="list-group-item-heading">{{ post.memory }}</h3>
   					<h3>{{ post.userid }}</h3>
-  					<h3> {{ jwtCtrl.id }}</h3>
-  					
-  				</div>
-
-  			</a>
-  
+  					<h3> {{ jwtCtrl.id }}</h3> -->
+  					<img class="img-responsive" id="flocka" src="{{post.avatar_url}}" />
+  				</a>
   		</div>
-  		
+  		</div>
 </div>
 
-{{1+1}}
-
-<div> {{jwtCtr.id}} </div>
-<div> {{jwtCtr.id}} </div>
 
 
-<form id="new-album-form" ng-submit="jwtCtrl.print()">
-		
-			<div class="text-center">
-			<button type="submit" class="btn btn-info btn-block">run controller</button>
-			</div>
-		</form>
 

@@ -13,6 +13,8 @@ function createPost(req,res){
 	newPost.date = req.body.date
 	newPost.avatar_url = req.body.avatar_url
 	newPost.userid = req.decoded.userid
+	newPost.userbio = req.decoded.bio
+	newPost.username = req.decoded.name
 	newPost.isPrivate = req.body.isPrivate
 	if (req.body.albumid) newPost.albumid = req.body.albumid
 

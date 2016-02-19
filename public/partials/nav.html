@@ -2,11 +2,13 @@
 	<nav class="navbar navbar-default">
 	<div class="container-fluid">
 	<div class="navbar-header">
-		<a class="navbar-brand" ui-sref="home">Project 4, Bitch</a>
+		<a class="navbar-brand" ui-sref="home">ReVisit</a>
 	</div>
 		<ul class="nav navbar-nav navbar-right">
 			<li ng-if="usersCtrl.loggedIn"><a>Hi {{usersCtrl.user.email}}</a></li>
-			<li ng-if="usersCtrl.loggedIn"><a ui-sref="posts">Posts</a></li> 
+			<li ng-if="usersCtrl.loggedIn"><a ui-sref="publicposts">Public Entries</a></li> 
+			<li ng-if="usersCtrl.loggedIn"><a ui-sref="album-form">My Experiences</a></li>
+			<li ng-if="usersCtrl.loggedIn"><a ui-sref="myposts">My Entries</a></li>
 			<li ng-if="!usersCtrl.loggedIn"><a ui-sref="login">Login</a></li>
 			<li ng-if="!usersCtrl.loggedIn"><a ui-sref="signup">Sign up	</a></li>
 			<li ng-if="usersCtrl.loggedIn"><a ng-click="usersCtrl.logout()">Log out</a></li>  

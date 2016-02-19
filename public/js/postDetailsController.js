@@ -18,8 +18,8 @@ function PostDetailsController(postsFactory,$stateParams,$location){
 	}
 	vm.showPost($stateParams.postId)
 
-	vm.updatePost = function(postId, memory, date, avatar_url){
-		var data = {memory: memory, date: date, avatar_url: avatar_url}
+	vm.updatePost = function(postId, memory, date){
+		var data = {memory: memory, date: date}
 		vm.api.updatePost(postId,data).success(function(response){
 			console.log(response)
 			vm.post = response
@@ -30,7 +30,7 @@ function PostDetailsController(postsFactory,$stateParams,$location){
 	vm.removePost = function(postId){
 		vm.api.removePost(postId).success(function(response){
 			console.log(response)
-			$location.path('/posts')
+			$location.path('/myposts')
 		})
 	}
 }

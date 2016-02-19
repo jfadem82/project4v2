@@ -80,7 +80,7 @@ function authenticateUser(req, res) {
 	// 1 - find the user in our db
 	User.findOne({
 		email: req.body.email
-	}).select('name email password').exec(function(err, user){
+	}).select('name email password bio').exec(function(err, user){
 		if(err) throw err
 		if(!user){
 			res.json({success: false, message: "No such user, Brah."})
@@ -90,11 +90,14 @@ function authenticateUser(req, res) {
 			if(!validPassword){
 				res.json({success: false, message: "Invalid password, Brah."})
 			} else {
+				console.log(user.bio)
+				console.log(user.name)
 				// password is good!
 				var token = jwt.sign({
 					name: user.name,
 					email: user.email,
-					userid: user._id
+					userid: user._id,
+					bio: user.bio
 				}, mySpecialSecret, {
 					expiresInMinutes: 1440
 				})
