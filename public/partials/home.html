@@ -1,10 +1,10 @@
 <div class="jumbotron">
 	<h1>ReVisit Soon</h1>	
 </div>
-	<div class="jumbotron">
-		<h1>Login</h1>		
+	<div class="jumbotron" id="login">
+		<h1 id="signup1">Login</h1>		
 
-		<form ng-submit="usersCtrl.login()">
+		<form ng-submit="usersCtrl.login()" id="signup1">
 			
 			<div class="form-group">
 				<label>E-Mail</label>
@@ -20,8 +20,8 @@
 				{{ usersCtrl.error }}
 			</div>
 
-			<button type="submit" class="btn btn-block btn-primary">
-				<span>Login</span>
+			<button type="submit" class="btn btn-secondary btn-lg btn-block">
+				<span><strong>Login</strong></span>
 			</button>
 
 		</form>

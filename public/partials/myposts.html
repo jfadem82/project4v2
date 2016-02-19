@@ -1,10 +1,10 @@
 <h1 id="center-text">My Entries</h1>
 <div class="fix-width">
-<div ng-controller="PostsController as postsCtrl" class="panel panel-default">
-	<div class="panel-heading"><h3 class="panel-title">A snapshot of one time and place in your life.</h3></div>
+<div ng-controller="PostsController as postsCtrl" class="panel panel-default" id="new-post-form">
+	<h3 class="panel-title">A snapshot of one time and place in your life.</h3>
 	<div class="panel-body">
 
-		<form id="new-post-form" ng-submit="postsCtrl.addPost(postsCtrl.newPost.memory,postsCtrl.newPost.date,postsCtrl.newPost.avatar_url,postsCtrl.newPost.isPrivate)">
+		<form ng-submit="postsCtrl.addPost(postsCtrl.newPost.memory,postsCtrl.newPost.date,postsCtrl.newPost.avatar_url,postsCtrl.newPost.isPrivate)">
 
 		<input type="file" id="file_input" ng-model="postsCtrl.newPost.avatar_url" ng-click="postsCtrl.sthree()"/>
   			<p id="status">Select a photo to accompany this entry</p>
@@ -24,7 +24,7 @@
 
 <br>
 			<div class="text-center">
-			<button type="submit" onclick="window.location.reload()" class="btn btn-info btn-block">New Entry</button>
+			<button type="submit" onclick="window.location.reload()" class="btn btn-secondary btn-lg btn-block">New Entry</button>
 			</div>
 		</form>
 	</div>

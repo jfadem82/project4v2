@@ -2,7 +2,7 @@
 <div class="fix-width">
 <div class="panel panel-default">
 	<div class="panel-heading"><h3 class="panel-title">A collection of photos from one chapter of your life, with captions and music to enhance the memory</h3></div>
-	<div class="panel-body">
+	<div class="panel-body" id="album-form">
 		<form id="new-album-form" ng-submit="albCTRL.addAlbum(albCTRL.newAlbum.name, albCTRL.newAlbum.avatar_url)">
 			<div class="form-group">
 				<input type="text" name="name" ng-model="albCTRL.newAlbum.name" placeholder="Chapter Title" class="form-control">
@@ -11,12 +11,12 @@
 				<!-- below here is for the embedded posts -->
 
 			<!-- still need to add avatar_url stuff and any other fields -->
-		<input type="file" id="file_input" ng-model="albCTRL.newAlbum.avatar_url" ng-click="albCTRL.sthree()"/>
-			<p id="status">Upload a song that reminds you of this chapter in your life</p>
+		<input type="file" class="file-input" id="file_input" ng-model="albCTRL.newAlbum.avatar_url" ng-click="albCTRL.sthree()"/>
+			<p id="signup1">Upload a song that reminds you of this chapter in your life</p>
 				<iframe id="audio-preview" src="{{albDetailsCTRL.trustSrc(albCTRL.newAlbum.avatar_url)}}" width="300" height="70" frameborder="0" allowtransparency="true"></iframe>
 <!-- 					<input type="hidden" id="song-preview" name="avatar_url" ng-model="albCTRL.newAlbum.avatar_url" /> -->
 			<div class="text-center">
-			<button type="submit" class="btn btn-info btn-block">New Chapter</button>
+			<button type="submit" class="btn btn-info btn-block btn-secondary">New Chapter</button>
 			</div>
 		</form>
 	</div>

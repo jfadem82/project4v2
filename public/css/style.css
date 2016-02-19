@@ -18,6 +18,7 @@
 
 .body {
   background-color: #333333;
+  font-family: 'Playfair'
 }
 
 .carousel-content {
@@ -41,9 +42,67 @@
 .min-width {
   width:150px;
   margin-left: 230px;
-display: block;
+  display: block;
 
 }
 
+.bawdy {
+  font-family: playfair;
+}
 
+.navbar-default {
+  background-color: transparent;
+}
 
+.jumbotron {
+  background-color: transparent;
+}
+
+#signup {
+  background-image: url("http://www.buffalogov.org/files/Images/highway4.JPG") 
+
+}
+
+#signup1 {
+  color: white;
+}
+
+.form-control {
+  background: rgba(0, 0, 0, 0);
+  color: white;
+}
+
+.btn-secondary {
+  background-color: transparent;
+}
+
+#login {
+  background-image: url("http://theoasisofmysoul.com/wp-content/uploads/2010/06/Highway5010_thumb.jpg")
+}
+
+.form-group {
+  background: rgba(0, 0, 0, 0);
+  color: white;
+}
+
+.chapters {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/e/e0/Clouds_over_the_Atlantic_Ocean.jpg")
+}
+
+#album-form {
+  background-image: url("http://www.bloglmn.com/wp-content/uploads/Ocean1.jpg")
+}
+
+#new-post-form {
+  background-image: url("http://soffront.com/staging/wp-content/uploads/2010/07/los-angeles-cityscape.jpg");
+    color: white;
+}
+
+.public-posts {
+  background-image: url("http://nrml.ca/media/logos/main/BORN-X-RAISED_2x.jpg");
+  margin-bottom: 
+}
+
+.file-input {
+  color: white;
+}
