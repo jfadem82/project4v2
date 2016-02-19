@@ -4,9 +4,9 @@
 		<h1 id="center-text">&nbsp;{{ albDetailsCTRL.album.name }}</h1>
 
 <div class="fix-width">
-<div class="panel panel-default" id="dim-panel">
+<div class=class="panel panel-default" id="new-post-form">
 	<div class="panel-heading"><h3 class="panel-title">Add An Entry to this Chapter</h3></div>
-	<div ng-controller="PostsController as postsCtrl" class="panel panel-default" id="new-post-form">
+	<div ng-controller="PostsController as postsCtrl" class="panel-body">
 
 		<form id="new-post-form" ng-submit="postsCtrl.addAlbumPost(albDetailsCTRL.album._id, postsCtrl.newPost.memory,postsCtrl.newPost.date,postsCtrl.newPost.avatar_url,postsCtrl.newPost.isPrivate)">
 
