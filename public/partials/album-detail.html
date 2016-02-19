@@ -1,17 +1,17 @@
-<div class="panel panel-default">
+<div class="panel panel-default" id="hide-panel">
 	
 	
 		<h1>&nbsp;{{ albDetailsCTRL.album.name }}</h1>
 
 
-<div class="panel panel-default">
-	<div class="panel-heading"><h3 class="panel-title">Add An Entry to this Experience</h3></div>
+<div class="panel panel-default" id="dim-panel">
+	<div class="panel-heading"><h3 class="panel-title">Add An Entry to this Chapter</h3></div>
 	<div ng-controller="PostsController as postsCtrl" class="panel-body">
 
 		<form id="new-post-form" ng-submit="postsCtrl.addAlbumPost(albDetailsCTRL.album._id, postsCtrl.newPost.memory,postsCtrl.newPost.date,postsCtrl.newPost.avatar_url,postsCtrl.newPost.isPrivate)">
 
 		<input type="file" id="file_input" ng-model="postsCtrl.newPost.avatar_url" ng-click="postsCtrl.sthree()"/>
-  			<p id="status">Select a song that reminds you of this Experience</p>
+  			<p id="status">Upload a photo that reminds you of this entry</p>
   			<img class="img-responsive"  id="preview" src="" />
 		<input type="hidden" id="avatar_url" name="avatar_url" ng-model="postsCtrl.newPost.avatar_url" />
 			<div class="form-group">    
@@ -23,7 +23,7 @@
 
 			<div>
 				<input type="checkbox" name="isPrivate" ng-model="postsCtrl.newPost.isPrivate">
-				<label>Would you like this post to be private?</label>
+				<label>Would you like this entry to be private?</label>
 			</div>
 
 
@@ -41,13 +41,17 @@
 
 		<div class="col-xs-6 col-md-4" ng-repeat="post in postsCtrl.posts track by $index" ng-if="post.albumid == albDetailsCTRL.album._id">
 			
-			<span class="thumbnail setHeight" class="list-group-item" style="display:table-cell;vertical-align:middle;width:328px;height:550px;">
+			<span class="thumbnail setHeight" class="list-group-item" style="display:table-cell;vertical-align:middle;width:328px;">
 				
 				<div class="center-posts" style="margin-left:auto;margin-right:auto;">		
-  					<img class="img-responsive" id="flocka" src="{{post.avatar_url}}" />
+  			<a href="#/posts/{{ post._id }}">	<img class="img-responsive" id="flocka" src="{{post.avatar_url}}" /> </a>
   					<span id="center-text">	<h4 id="memoryDescription" >{{ post.memory }}</h4> </span>
 					<h6>{{ post.username }} </h6>
-					<h6>{{ post.date }}</h6>	
+					<h6>{{ post.date }}</h6>
+
+			
+					
+
   				</div>
 
   			</span>  

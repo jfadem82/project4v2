@@ -1,17 +1,17 @@
-<h1>New Experience</h1>
+<h1>My Chapters</h1>
 <div class="panel panel-default">
 	<div class="panel-heading"><h3 class="panel-title">ReVisit experiences are like photo albums. A collection of entries from one chapter of your life, but with captions and music to enhance the memory</h3></div>
 	<div class="panel-body">
 		<form id="new-album-form" ng-submit="albCTRL.addAlbum(albCTRL.newAlbum.name, albCTRL.newAlbum.avatar_url)">
 			<div class="form-group">
-				<input type="text" name="name" ng-model="albCTRL.newAlbum.name" placeholder="Name" class="form-control">
+				<input type="text" name="name" ng-model="albCTRL.newAlbum.name" placeholder="Chapter Title" class="form-control">
 			</div>
 
 				<!-- below here is for the embedded posts -->
 
 			<!-- still need to add avatar_url stuff and any other fields -->
 		<input type="file" id="file_input" ng-model="albCTRL.newAlbum.avatar_url" ng-click="albCTRL.sthree()"/>
-			<p id="status">Please select a file</p>
+			<p id="status">Upload a song that reminds you of this chapter in your life</p>
 				<iframe id="audio-preview" src="{{albDetailsCTRL.trustSrc(albCTRL.newAlbum.avatar_url)}}" width="300" height="70" frameborder="0" allowtransparency="true"></iframe>
 <!-- 					<input type="hidden" id="song-preview" name="avatar_url" ng-model="albCTRL.newAlbum.avatar_url" /> -->
 			<div class="text-center">
@@ -22,15 +22,14 @@
 </div>
 
 
-<h2>My Experiences:</h2>
+
 
 <div class="list-group">
 	<div ng-controller="jwtController as jwtCtrl">
 	{{jwtCtrl.print()}}
 		<a ng-repeat="album in albCTRL.albums track by $index" ng-if="album.userid == jwtCtrl.id" href="#/album-form/{{ album._id }}" class="list-group-item">
   			<!-- <h3 class="list-group-item-heading">Album ID {{ album._id }}</h3> -->
-  			<h3>Click </h3>
-  			<h1 class="list-group-item-heading">{{ album.name }}</h1>
+  			<h1 id="center-text" class="list-group-item-heading">{{ album.name }}</h1>
   			<!-- <h3 class="list-group-item-heading">USERID {{ album.userid }}</h3> -->
   		</a>
   	</div>
