@@ -5,7 +5,7 @@ angular
 albumsFactory.$inject = ['$http']
 
 function albumsFactory($http){
-	var albumsUrl = 'http://localhost:3000/api/albums'
+	var albumsUrl = 'https://revisit-app.herokuapp.com/api/albums'
 	var albums = {}
 
 	albums.list = function(){
