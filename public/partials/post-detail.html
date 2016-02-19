@@ -1,8 +1,12 @@
-<div class="panel panel-default" ng-hide="carDetailsCtrl.editing">
+<div class="panel panel-default" id="hide-panel" ng-hide="carDetailsCtrl.editing">
 	
 	<div class="panel-body">
 
-		<img class="img-responsive" id="flocka" src="{{postDetailsCtrl.post.avatar_url}}" />
+
+		<img style="margin-left: auto;
+    margin-right: auto"class="img-responsive" id="flocka" src="{{postDetailsCtrl.post.avatar_url}}" />
+		
+
 
 <div class="col-xs-12">
 		<h4 id="center-text" >{{ postDetailsCtrl.post.memory }}</h4>
@@ -27,7 +31,7 @@
 	</span>	
 
 
-<div class="panel panel-default" ng-show="postDetailsCtrl.editing">
+<div class="panel panel-default"  ng-show="postDetailsCtrl.editing">
 <!-- <h3><strong>ID</strong>: {{ postDetailsCtrl.post._id }}</h3> -->
 	<div class="panel-heading"><h3 class="panel-title">Edit Entry</h3></div>
 	<div class="panel-body">

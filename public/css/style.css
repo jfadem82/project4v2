@@ -1,11 +1,6 @@
 .setHeight {
 	height: 550px;
 	border-width: 0px;
-	
-	
-	
-	
-
 }
 
 #center-text{
@@ -14,9 +9,11 @@
 
 .center-posts {
 	/*text-align: center;*/
+}
 
-
-
+#hide-panel {
+	border-width: 0px;
+	
 }
 
 /*.setPhoto {
