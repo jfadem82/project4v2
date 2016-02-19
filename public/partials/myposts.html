@@ -1,4 +1,5 @@
-<h1>New Entry</h1>
+<h1 id="center-text">My Entries</h1>
+<div class="fix-width">
 <div ng-controller="PostsController as postsCtrl" class="panel panel-default">
 	<div class="panel-heading"><h3 class="panel-title">A snapshot of one time and place in your life.</h3></div>
 	<div class="panel-body">
@@ -6,7 +7,7 @@
 		<form id="new-post-form" ng-submit="postsCtrl.addPost(postsCtrl.newPost.memory,postsCtrl.newPost.date,postsCtrl.newPost.avatar_url,postsCtrl.newPost.isPrivate)">
 
 		<input type="file" id="file_input" ng-model="postsCtrl.newPost.avatar_url" ng-click="postsCtrl.sthree()"/>
-  			<p id="status">Please select a file</p>
+  			<p id="status">Select a photo to accompany this entry</p>
   			<img class="img-responsive"  id="preview" src="" />
 		<input type="hidden" id="avatar_url" name="avatar_url" ng-model="postsCtrl.newPost.avatar_url" />
 			<div class="form-group">    
@@ -23,16 +24,16 @@
 
 <br>
 			<div class="text-center">
-			<button type="submit" onclick="window.location.reload()" class="btn btn-info btn-block">Submit Entry</button>
+			<button type="submit" onclick="window.location.reload()" class="btn btn-info btn-block">New Entry</button>
 			</div>
 		</form>
 	</div>
 </div>
 
 
+</div>
 
 
-<h1>My Entries</h1>
 {{jwtCtrl.print()}}
 <div class="list-group">
 	
@@ -48,6 +49,7 @@
   		</div>
   		</div>
 </div>
+
 
 
 

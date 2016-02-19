@@ -1,9 +1,9 @@
 <div class="panel panel-default" id="hide-panel">
 	
 	
-		<h1>&nbsp;{{ albDetailsCTRL.album.name }}</h1>
+		<h1 id="center-text">&nbsp;{{ albDetailsCTRL.album.name }}</h1>
 
-
+<div class="fix-width">
 <div class="panel panel-default" id="dim-panel">
 	<div class="panel-heading"><h3 class="panel-title">Add An Entry to this Chapter</h3></div>
 	<div ng-controller="PostsController as postsCtrl" class="panel-body">
@@ -33,6 +33,8 @@
 		</form>
 	</div>
 </div>
+</div>
+
 
 
 <div class="list-group">
@@ -66,4 +68,5 @@
 <button class="btn btn-danger btn-block" ng-click="albDetailsCTRL.removePost(albDetailsCTRL.album._id)">DELETE THIS ALBUM</button>
 <br>
 <iframe id="playur" src="{{albDetailsCTRL.trustSrc(albDetailsCTRL.album.avatar_url)}}" width="300" height="70" frameborder="0" allowtransparency="true"></iframe>
+
 
