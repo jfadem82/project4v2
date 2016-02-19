@@ -15,7 +15,7 @@
 	</div>
 
 
-<span ng-controller="PostDetailsController as postDetailsCtrl">
+
 	<span ng-controller="jwtController as jwtCtrl">
 	{{jwtCtrl.print()}}
 		<div class="text-center" ng-if="postDetailsCtrl.post.userid == jwtCtrl.id">
@@ -25,7 +25,7 @@
 
 		</div>
 	</span>	
-</span>
+
 
 <div class="panel panel-default" ng-show="postDetailsCtrl.editing">
 <h3><strong>ID</strong>: {{ postDetailsCtrl.post._id }}</h3>

@@ -9,19 +9,55 @@
 <button class="btn btn-danger btn-block" ng-click="albDetailsCTRL.removePost(albDetailsCTRL.album._id)">DELETE THIS ALBUM</button>
 
 
+
+
+
+
+//this is the one your trying to get working
 <div class="list-group">
 	
-		<div ng-controller="PostsController as postsCtrl">
-			<a ng-repeat="post in postsCtrl.posts track by $index" ng-if="post.albumid == albDetailsCTRL.album._id" href="#/posts/{{ post._id }}" class="list-group-item">
+		<div class="row" ng-controller="PostsController as postsCtrl">
+
+		<div class="col-xs-6 col-md-4" ng-repeat="post in postsCtrl.posts track by $index" ng-if="post.albumid == albDetailsCTRL.album._id">
+			
+			<a class="thumbnail setHeight" href="#/posts/{{ post._id }}" class="list-group-item">
 	
 				<div>
+				
   					<h3 class="list-group-item-heading">{{ post.memory }}</h3>
   					<!-- <h3>post's albumid {{ post.albumid }}</h3>
   					<h3> this albums id {{ albDetailsCTRL.album._id }}</h3>  --> 					
   				</div>
   			</a>  
+  			</div>
   		</div>  		
 </div>
+
+<div class="list-group">
+	
+		<div class="row" ng-controller="PostsController as postsCtrl">
+		
+		<div class="col-xs-6 col-md-4" ng-repeat="post in postsCtrl.posts track by $index" ng-if="post.userid == jwtCtrl.id">
+
+			<a class="thumbnail setHeight" href="#/posts/{{ post._id }}" class="list-group-item">
+	
+			
+
+  				<!-- 	<h3 class="list-group-item-heading">{{ post.memory }}</h3>
+  					<h3>{{ post.userid }}</h3>
+  					<h3> {{ jwtCtrl.id }}</h3> -->
+  					<img class="img-responsive" id="flocka" src="{{post.avatar_url}}" />
+  				</a>
+  		</div>
+  		</div>
+</div>
+
+
+
+
+
+
+
 
 <h1>Add Memory to this Album</h1>
 <div class="panel panel-default">
@@ -55,5 +91,5 @@
 </div>
 
 
-<iframe src="{{albDetailsCTRL.trustSrc(albDetailsCTRL.album.avatar_url)}}" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+<iframe id="playur" src="{{albDetailsCTRL.trustSrc(albDetailsCTRL.album.avatar_url)}}" width="300" height="70" frameborder="0" allowtransparency="true"></iframe>
 
