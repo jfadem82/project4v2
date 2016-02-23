@@ -34,7 +34,7 @@
 
 .fix-width {
   width:500px;
-  margin-left: 230px;
+  margin-left: 325px;
 
 }
 
@@ -43,6 +43,11 @@
   margin-left: 230px;
 display: block;
 
+}
+
+.background-image {
+
+  background-image: url("http://www.bloglmn.com/wp-content/uploads/Ocean1.jpg");
 }
 
 
