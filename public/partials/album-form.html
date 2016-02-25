@@ -1,6 +1,6 @@
-<h1 id="center-text">My Chapters</h1>
+<h1 id="center-text" class="fontish"><strong>My Chapters</strong></h1>
 <div class="fix-width">
-<div class="panel panel-default">
+<div class="panel panel-default fontish">
 	<div class="panel-heading"><h3 class="panel-title">A collection of photos from one chapter of your life, with captions and music to enhance the memory</h3></div>
 	<div class="panel-body">
 		<form id="new-album-form" ng-submit="albCTRL.addAlbum(albCTRL.newAlbum.name, albCTRL.newAlbum.avatar_url)">
@@ -16,13 +16,13 @@
 				<iframe id="audio-preview" src="{{albDetailsCTRL.trustSrc(albCTRL.newAlbum.avatar_url)}}" width="300" height="70" frameborder="0" allowtransparency="true"></iframe>
 <!-- 					<input type="hidden" id="song-preview" name="avatar_url" ng-model="albCTRL.newAlbum.avatar_url" /> -->
 			<div class="text-center">
-			<button type="submit" class="btn btn-info btn-block">New Chapter</button>
+			<button type="submit" class="btn btn-info btn-block" style="background-color:#80A4C8;border-color:black;">New Chapter</button>
 			</div>
 		</form>
 	</div>
 </div>
 
-<p>BREAK</p>
+<br>
 
 
 
@@ -31,7 +31,7 @@
 
 
 
-<div class="list-group">
+<div class="list-group fontish">
 	<div ng-controller="jwtController as jwtCtrl">
 	{{jwtCtrl.print()}}
 

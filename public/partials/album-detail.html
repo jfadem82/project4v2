@@ -1,10 +1,10 @@
 <div class="panel panel-default bckgrndcolor" id="hide-panel">
 	
 	
-		<h1 id="center-text">&nbsp;{{ albDetailsCTRL.album.name }}</h1>
+		<h1 id="center-text" class="fontish"><strong>&nbsp;{{ albDetailsCTRL.album.name }}</strong></h1>
 
 <div class="fix-width">
-<div class="panel panel-default" id="dim-panel">
+<div class="panel panel-default fontish" id="dim-panel">
 	<div class="panel-heading"><h3 class="panel-title">Add An Entry to this Chapter</h3></div>
 	<div ng-controller="PostsController as postsCtrl" class="panel-body">
 
@@ -28,7 +28,7 @@
 
 
 			<div class="text-center">
-			<button type="submit" onclick="window.location.reload()" class="btn btn-info btn-block">Submit </button>
+			<button type="submit" onclick="window.location.reload()" class="btn btn-info btn-block" style="background-color:#80A4C8;border-color:black;">Submit </button>
 			</div>
 		</form>
 	</div>
@@ -45,9 +45,9 @@
 			
 			<span class="thumbnail setHeight" class="list-group-item" style="display:table-cell;vertical-align:middle;width:328px;">
 				
-				<div class="center-posts readable" style="margin-left:auto;margin-right:auto;">
+				<div class="center-posts readable fontish" style="margin-left:auto;margin-right:auto;">
 
-				<div class="panel-heading see-border3"><p class="panel-title ">{{ post.username }} 
+				<div class="panel-heading see-border3"><p class="panel-title small-er">
 					{{ post.date }}</p></div>
 
 <div class="see-border2">
@@ -58,7 +58,7 @@
 
 			
 					
-
+<br>
   				</div>
 
   			</span>  
