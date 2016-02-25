@@ -1,7 +1,10 @@
 .setHeight {
 	height: 490px;
 	border-width: 0px;
+  background-color: rgba(0,0,0,0);
 }
+
+
 
 #center-text{
 	text-align: center;
@@ -9,6 +12,28 @@
 
 .center-posts {
 	/*text-align: center;*/
+}
+
+.see-border {
+  border-style: solid;
+    border-width: 0px;
+   
+    background-color: rgba(0,0,0,.2);
+  padding: 15px;
+  
+
+
+  
+}
+
+.blur {
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+
+  background-color: #ccc;
 }
 
 .bckgrndpic {
