@@ -11,6 +11,20 @@
 	/*text-align: center;*/
 }
 
+.bckgrndpic {
+  background-image: url(./Vdank.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
+
+  background-size: cover;
+}
+
+.max-width {
+  max-width: 100%;
+}
+
+
 #hide-panel {
 	border-width: 0px;
 	
