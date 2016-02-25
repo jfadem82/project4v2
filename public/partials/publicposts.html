@@ -13,8 +13,10 @@
 	<div class="col-xs-6 col-md-4" ng-repeat="post in postsCtrl.posts | orderBy:'-_id'" ng-if="post.isPrivate != true">
 		 
       <span class="thumbnail setHeight"  class="list-group-item" style="display:table-cell;vertical-align:middle;width:328px;">
-      
+
           <div class="see-border"style="margin-left:auto;margin-right:auto;">
+          <div class="panel-heading"><h6 class="panel-title">{{ post.username }} 
+          {{ post.date }}</h6></div>
   		        <a href="#/posts/{{ post._id }}" > <img src="{{ post.avatar_url }}"> </a> 
 
                

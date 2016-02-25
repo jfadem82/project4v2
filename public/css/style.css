@@ -20,20 +20,33 @@
    
     background-color: rgba(0,0,0,.2);
   padding: 15px;
-  
-
-
-  
 }
 
-.blur {
-  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px);
+.see-border2 {
+  padding: 15px;
+}
 
-  background-color: #ccc;
+.see-border3 {
+
+  border-top: 2px solid;
+  border-bottom: 0px;
+    border-color: rgba(92,129,186,1);
+}
+
+.see-border4 {
+     
+  border-bottom: 2px solid;
+  border-color: rgba(92,129,186,1);
+
+ 
+}
+
+.bckgrndcolor {
+   background-color: rgba(0,0,0,0);
+}
+
+.readable {
+  background-color: rgba(233,237,240,.7);
 }
 
 .bckgrndpic {
