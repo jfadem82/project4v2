@@ -4,14 +4,14 @@
 		<h1 id="center-text" class="fontish"><strong>&nbsp;{{ albDetailsCTRL.album.name }}</strong></h1>
 
 <div class="fix-width">
-<div class="panel panel-default fontish" id="dim-panel">
+<div class="panel panel-default fontish readablee" id="dim-panel">
 	<div class="panel-heading"><h3 class="panel-title">Add An Entry to this Chapter</h3></div>
 	<div ng-controller="PostsController as postsCtrl" class="panel-body">
 
 		<form id="new-post-form" ng-submit="postsCtrl.addAlbumPost(albDetailsCTRL.album._id, postsCtrl.newPost.memory,postsCtrl.newPost.date,postsCtrl.newPost.avatar_url,postsCtrl.newPost.isPrivate)">
 
 		<input type="file" id="file_input" ng-model="postsCtrl.newPost.avatar_url" ng-click="postsCtrl.sthree()"/>
-  			<p id="status">Upload a photo that reminds you of this entry</p>
+  			<p id="status">Upload a photo that reminds you of this entry (wait until you see photo before submitting form)</p>
   			<img class="img-responsive"  id="preview" src="" />
 		<input type="hidden" id="avatar_url" name="avatar_url" ng-model="postsCtrl.newPost.avatar_url" />
 			<div class="form-group">    

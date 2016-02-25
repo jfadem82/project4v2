@@ -1,14 +1,14 @@
 <h1 id="center-text" class="fontish"><strong>My Entries</strong></h1>
 
 <div class="fix-width">
-<div ng-controller="PostsController as postsCtrl" class="panel panel-default fontish">
-	<div class="panel-heading"><h3 class="panel-title">A snapshot of one time and place in your life.</h3></div>
+<div ng-controller="PostsController as postsCtrl" class="panel panel-default fontish readablee">
+	<div class="panel-heading"><h3 class="panel-title">Snapshots of one time and place in your life.</h3></div>
 	<div class="panel-body">
 
 		<form id="new-post-form" ng-submit="postsCtrl.addPost(postsCtrl.newPost.memory,postsCtrl.newPost.date,postsCtrl.newPost.avatar_url,postsCtrl.newPost.isPrivate)">
 
 		<input type="file" id="file_input" ng-model="postsCtrl.newPost.avatar_url" ng-click="postsCtrl.sthree()"/>
-  			<p id="status">Select a photo to accompany this entry</p>
+  			<p id="status">Select a photo to accompany this entry (wait until you photo before submitting form)</p>
   			<img class="img-responsive"  id="preview" src="" />
 		<input type="hidden" id="avatar_url" name="avatar_url" ng-model="postsCtrl.newPost.avatar_url" />
 			<div class="form-group">    

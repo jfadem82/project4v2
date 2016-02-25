@@ -58,6 +58,21 @@
   border-radius: 25px;
 }
 
+.readablee {
+  background-color: rgba(233,237,240,.9);
+  
+}
+
+.readableee {
+  background-color: rgba(233,237,240,.8);
+  
+}
+
+.readableeee {
+  background-color: rgba(233,237,240,.8);
+  border-radius: 25px;
+}
+
 .readabled {
   background-color: rgba(233,237,240,.9);
   border-radius: 25px;
@@ -68,7 +83,6 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center; 
-
   background-size: cover;
 }
 
