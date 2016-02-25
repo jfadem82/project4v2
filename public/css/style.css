@@ -4,6 +4,16 @@
   background-color: rgba(0,0,0,0);
 }
 
+.nav-b {
+
+  background-color: rgba(248,248,248,1);
+  font-color: #777777;
+  border-bottom: 1px solid;
+  border-color: gray;
+  
+
+
+}
 
 
 #center-text{
