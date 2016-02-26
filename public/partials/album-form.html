@@ -1,7 +1,7 @@
-<h1 id="center-text">My Chapters</h1>
+<h1 id="center-text" class="fontish"><strong>My Chapters</strong></h1>
 <div class="fix-width">
-<div class="panel panel-default">
-	<div class="panel-heading"><h3 class="panel-title">A collection of photos from one chapter of your life, with captions and music to enhance the memory</h3></div>
+<div class="panel panel-default fontish readablee">
+	<div class="panel-heading"><h3 class="panel-title">Collections of photos from separate chapters of your life, with captions and music to enhance the memory</h3></div>
 	<div class="panel-body">
 		<form id="new-album-form" ng-submit="albCTRL.addAlbum(albCTRL.newAlbum.name, albCTRL.newAlbum.avatar_url)">
 			<div class="form-group">
@@ -12,20 +12,17 @@
 
 			<!-- still need to add avatar_url stuff and any other fields -->
 		<input type="file" id="file_input" ng-model="albCTRL.newAlbum.avatar_url" ng-click="albCTRL.sthree()"/>
-			<p id="status">Upload a song that reminds you of this chapter in your life</p>
+			<p id="status">Upload a song that reminds you of this chapter in your life (wait to hear music before submitting form)</p>
 				<iframe id="audio-preview" src="{{albDetailsCTRL.trustSrc(albCTRL.newAlbum.avatar_url)}}" width="300" height="70" frameborder="0" allowtransparency="true"></iframe>
 <!-- 					<input type="hidden" id="song-preview" name="avatar_url" ng-model="albCTRL.newAlbum.avatar_url" /> -->
 			<div class="text-center">
-			<button type="submit" class="btn btn-info btn-block">New Chapter</button>
+			<button type="submit" class="btn btn-block btn-primary" style="border-color:black;">New Chapter</button>
 			</div>
 		</form>
 	</div>
 </div>
 
-<br><br>
-
-
-<p>BREAK</p>
+<br>
 
 
 
@@ -34,11 +31,11 @@
 
 
 
-<div class="list-group">
+<div class="list-group fontish">
 	<div ng-controller="jwtController as jwtCtrl">
 	{{jwtCtrl.print()}}
 
-		<a ng-repeat="album in albCTRL.albums track by $index" ng-if="album.userid == jwtCtrl.id" href="#/album-form/{{ album._id }}" class="list-group-item">
+		<a ng-repeat="album in albCTRL.albums | orderBy:'-_id'" ng-if="album.userid == jwtCtrl.id" href="#/album-form/{{ album._id }}" class="list-group-item readableee">
   			<!-- <h3 class="list-group-item-heading">Album ID {{ album._id }}</h3> -->
   			<h1 class=".col-md-4" id="center-text" >{{ album.name }}</h1>
   			<!-- <h3 class="list-group-item-heading">USERID {{ album.userid }}</h3> -->
@@ -46,7 +43,7 @@
 
   	</div>
 </div>
-
+<br><br><br><br><br><br><br><br><br><br>
 </div>
 
 
