@@ -7,8 +7,9 @@ var express 	= require('express'),
 	port 		= process.env.PORT || 3000,
 	mongoose 	= require('mongoose'),
 	cors 		= require('cors'),
-	apiRouter 	= require('./api/routes/Routes')
-	// auth		= require('./config/auth.js'),
+	apiRouter 	= require('./api/routes/Routes'),
+    auth        = require('./config/auth.js'),
+    favicon = require('serve-favicon'),
 	AWS_ACCESS_KEY 	= process.env.AWS_ACCESS_KEY || auth.amazonAuth.clientID,
 	AWS_SECRET_KEY 	= process.env.AWS_SECRET_KEY || auth.amazonAuth.clientSecret,
 	S3_BUCKET 	 	= process.env.S3_BUCKET || auth.amazonAuth.callBackURL;
@@ -26,6 +27,8 @@ app.use(cors())
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')))
+
+app.use(favicon(__dirname + '/public/images/favicon.ico'));
 
 app.use(morgan('dev'))
 

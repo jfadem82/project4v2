@@ -1,8 +1,8 @@
-<div class="jumbotron">
+<div class="jumbotron readable fontish">
 	<h1>ReVisit Soon</h1>	
 </div>
-	<div class="jumbotron" id="login">
-		<h1 id="signup1">Login</h1>		
+	<div class="jumbotron readableeee fontish">
+		<h1>Login</h1>		
 
 		<form ng-submit="usersCtrl.login()" id="signup1">
 			
@@ -19,9 +19,8 @@
 			<div class="alert alert-danger" ng-if="usersCtrl.error">
 				{{ usersCtrl.error }}
 			</div>
-
-			<button type="submit" class="btn btn-secondary btn-lg btn-block">
-				<span><strong>Login</strong></span>
+			<button type="submit" class="btn btn-block btn-primary" style="border-color:black;">
+				<span>Login</span>
 			</button>
 
 		</form>
