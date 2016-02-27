@@ -1,6 +1,6 @@
 .setHeight {
-	height: 490px;
-	border-width: 0px;
+    height: 490px;
+    border-width: 0px;
   background-color: rgba(0,0,0,0);
 }
 
@@ -16,11 +16,11 @@
 
 
 #center-text{
-	text-align: center;
+    text-align: center;
 }
 
 .center-posts {
-	/*text-align: center;*/
+    /*text-align: center;*/
 }
 
 .see-border {
@@ -136,13 +136,12 @@
 
 
 #hide-panel {
-	border-width: 0px;
-	
+    border-width: 0px;
+    
 }
 
 .body {
   background-color: #333333;
-  font-family: 'Playfair'
 }
 
 .carousel-content {
@@ -158,7 +157,6 @@
 }
 
 .fix-width {
-
   width:500px;
   margin-left: 325px;
 
@@ -167,42 +165,8 @@
 .min-width {
   width:150px;
   margin-left: 230px;
-  display: block;
+display: block;
 
-}
-
-.bawdy {
-  font-family: playfair;
-}
-
-.navbar-default {
-  background-color: transparent;
-}
-
-.jumbotron {
-  background-color: transparent;
-}
-
-#signup {
-  background-image: url("http://www.buffalogov.org/files/Images/highway4.JPG") 
-
-}
-
-#signup1 {
-  color: white;
-}
-
-.form-control {
-  background: rgba(0, 0, 0, 0);
-  color: white;
-}
-
-.btn-secondary {
-  background-color: transparent;
-}
-
-#login {
-  background-image: url("http://theoasisofmysoul.com/wp-content/uploads/2010/06/Highway5010_thumb.jpg")
 }
 
 .background-image {
@@ -210,25 +174,3 @@
   background-image: url("http://www.bloglmn.com/wp-content/uploads/Ocean1.jpg");
 }
 
-
-.form-group {
-  background: rgba(0, 0, 0, 0);
-  color: white;
-}
-
-.chapters {
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/e/e0/Clouds_over_the_Atlantic_Ocean.jpg")
-}
-
-#album-form {
-  background-image: url("http://www.bloglmn.com/wp-content/uploads/Ocean1.jpg")
-}
-
-.public-posts {
-  background-image: url("http://nrml.ca/media/logos/main/BORN-X-RAISED_2x.jpg");
-  margin-bottom: 
-}
-
-.file-input {
-  color: white;
-}
