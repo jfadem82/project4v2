@@ -19,7 +19,7 @@ function PostsController (postsFactory, $window){
 
 
 	vm.addPost = function(memory, date, avatar_url, isPrivate){
-		console.log(memory)
+		
 		var data = {memory:memory, date:date, avatar_url:avatar_url, isPrivate:isPrivate}
 		
 
@@ -32,9 +32,9 @@ function PostsController (postsFactory, $window){
 	}
 
 	vm.addAlbumPost = function(albumid, memory, date, avatar_url, isPrivate){
-		console.log("values are " + albumid + memory + date + avatar_url + isPrivate)
-		var data = {albumid:albumid, memory:memory, date:date, avatar_url:avatar_url}
-
+		console.log("isPrivate is " + isPrivate)
+		var data = {albumid:albumid, memory:memory, date:date, avatar_url:avatar_url, isPrivate:isPrivate}
+		console.log("data is " + data)
 		vm.api.addAlbumPost(data)
 			.then(function success(res){
 				vm.posts.push(res.data.post)

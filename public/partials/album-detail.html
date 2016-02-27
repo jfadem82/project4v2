@@ -1,17 +1,19 @@
-<div class="panel panel-default" id="hide-panel">
+<div class="panel panel-default bckgrndcolor" id="hide-panel">
 	
 	
-		<h1 id="center-text">&nbsp;{{ albDetailsCTRL.album.name }}</h1>
+		<h1 id="center-text" class="fontish"><strong>&nbsp;{{ albDetailsCTRL.album.name }}</strong></h1>
 
 <div class="fix-width">
-<div class=class="panel panel-default" id="new-post-form">
+
+<div class="panel panel-default fontish readablee" id="dim-panel">
+
 	<div class="panel-heading"><h3 class="panel-title">Add An Entry to this Chapter</h3></div>
 	<div ng-controller="PostsController as postsCtrl" class="panel-body">
 
 		<form id="new-post-form" ng-submit="postsCtrl.addAlbumPost(albDetailsCTRL.album._id, postsCtrl.newPost.memory,postsCtrl.newPost.date,postsCtrl.newPost.avatar_url,postsCtrl.newPost.isPrivate)">
 
 		<input type="file" id="file_input" ng-model="postsCtrl.newPost.avatar_url" ng-click="postsCtrl.sthree()"/>
-  			<p id="status">Upload a photo that reminds you of this entry</p>
+  			<p id="status">Upload a photo that reminds you of this entry (wait until you see photo before submitting form)</p>
   			<img class="img-responsive"  id="preview" src="" />
 		<input type="hidden" id="avatar_url" name="avatar_url" ng-model="postsCtrl.newPost.avatar_url" />
 			<div class="form-group">    
@@ -28,7 +30,9 @@
 
 
 			<div class="text-center">
-			<button type="submit" onclick="window.location.reload()" class="btn btn-secondary btn-lg btn-block">Submit </button>
+
+
+			<button type="submit" onclick="window.location.reload()" class="btn btn-block btn-primary" style="border-color:black;">Submit </button>
 			</div>
 		</form>
 	</div>
@@ -45,16 +49,20 @@
 			
 			<span class="thumbnail setHeight" class="list-group-item" style="display:table-cell;vertical-align:middle;width:328px;">
 				
-				<div class="center-posts" style="margin-left:auto;margin-right:auto;">		
+				<div class="center-posts readable fontish" style="margin-left:auto;margin-right:auto;">
+
+				<div class="panel-heading see-border3"><p class="panel-title small-er">
+					{{ post.date }}</p></div>
+
+<div class="see-border2">
   			<a href="#/posts/{{ post._id }}">	<img class="img-responsive" id="flocka" src="{{post.avatar_url}}" /> </a>
-  					<span id="center-text">	<h4 id="memoryDescription" >{{ post.memory }}</h4> </span>
-					<h6>{{ post.username }} </h6>
-					<h6>{{ post.date }}</h6>
-					<h6>{{post._id}}</h6>
+</div>
+  					<span id="center-text">	<h4 class="see-border4" id="memoryDescription" >{{ post.memory }}</h4> </span>
+				
 
 			
 					
-
+<br>
   				</div>
 
   			</span>  
@@ -69,5 +77,6 @@
 <button class="btn btn-danger btn-block" ng-click="albDetailsCTRL.removePost(albDetailsCTRL.album._id)">DELETE THIS ALBUM</button>
 <br>
 <iframe id="playur" src="{{albDetailsCTRL.trustSrc(albDetailsCTRL.album.avatar_url)}}" width="300" height="70" frameborder="0" allowtransparency="true"></iframe>
+<br><br><br>
 
 

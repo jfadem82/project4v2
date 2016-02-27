@@ -1,4 +1,4 @@
-<div class="panel panel-default" id="hide-panel" ng-hide="carDetailsCtrl.editing">
+<div class="panel panel-default see-borderr" id="hide-panel" ng-hide="carDetailsCtrl.editing">
 	
 	<div class="panel-body">
 
@@ -8,8 +8,8 @@
 		
 
 
-<div class="col-xs-12">
-		<h4 id="center-text" >{{ postDetailsCtrl.post.memory }}</h4>
+<div class="col-xs-12 show-font">
+		<h4 id="center-text" class="big-ger" >{{ postDetailsCtrl.post.memory }}</h4>
 		<br>
 		<h6>{{ postDetailsCtrl.post.username }} </h6>
 		<h6>{{ postDetailsCtrl.post.date }}</h6>
@@ -24,13 +24,14 @@
 	{{jwtCtrl.print()}}
 		<div class="text-center" ng-if="postDetailsCtrl.post.userid == jwtCtrl.id">
 		
-		<div >
+		<div>
 
-		<button ng-click="postDetailsCtrl.editing=!postDetailsCtrl.editing">
+
+		<button  ng-click="postDetailsCtrl.editing=!postDetailsCtrl.editing">
 			<span class="glyphicon glyphicon-pencil"></span>
 		</button>
 
-		<button ng-click="postDetailsCtrl.removePost(postDetailsCtrl.post._id)">
+		<button  ng-click="postDetailsCtrl.removePost(postDetailsCtrl.post._id)">
 			<span class="glyphicon glyphicon-trash"></span>
 		
 
@@ -38,9 +39,10 @@
 
 		</div>
 	</span>	
+	<br>
 
 
-<div class="panel panel-default"  ng-show="postDetailsCtrl.editing">
+<div class="panel panel-default fontish"  ng-show="postDetailsCtrl.editing">
 <!-- <h3><strong>ID</strong>: {{ postDetailsCtrl.post._id }}</h3> -->
 	<div class="panel-heading"><h3 class="panel-title">Edit Entry</h3></div>
 	<div class="panel-body">
@@ -56,7 +58,7 @@
 				<input type="hidden" name="avatar_url" ng-model="postDetailsCtrl.post.avatar_url" class="form-control">
 			</div>
 			<div class="text-center">
-				<button type="submit" class="btn btn-info btn-block">Update Entry</button>
+				<button type="submit" class="btn btn-block btn-primary" style="border-color:black;">Update Entry</button>
 			</div>
 			
 		</form>

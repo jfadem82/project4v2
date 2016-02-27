@@ -6,7 +6,7 @@
 		<form id="new-post-form" ng-submit="postsCtrl.addPost(postsCtrl.newPost.memory,postsCtrl.newPost.date,postsCtrl.newPost.avatar_url,postsCtrl.newPost.isPrivate)">
 
 		<input type="file" id="file_input" ng-model="postsCtrl.newPost.avatar_url" ng-click="postsCtrl.sthree()"/>
-  			<p id="status">Please select a file</p>
+  			<p id="status">Please select a file (wait to see photo before submitting form)</p>
   			<img class="img-responsive"  id="preview" src="" />
 		<input type="hidden" id="avatar_url" name="avatar_url" ng-model="postsCtrl.newPost.avatar_url" />
 			<div class="form-group">    
