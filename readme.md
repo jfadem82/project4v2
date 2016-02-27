@@ -1,4 +1,5 @@
-g# README
+![Alt text](/assets/revisit1.png)
+![Alt text](/assets/revisit2.png)
 
 ## Project 4 - ReVisit
 Revisit is a digital diary to explore times and places in your life. Each entry is able to contain a picture, with a description of the picture, the date of occurrence, and also displays the user who made that entry. Users can also make chapters, which contain a collection of posts. Users can upload music to their chapters; the idea is they choose a song that reminds them of those memories. Between the pictures, music, date, and description, people can re-experience some of the feelings associated with that time in their life.
