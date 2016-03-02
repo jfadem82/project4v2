@@ -38,19 +38,19 @@ After forking/cloning, dont forget to run `npm install`. S3 will not work locall
 ##Wire Frames
 
 ### Home
-![Alt text](/assets/home.JPG)
+![Alt text](/assets/IMG_6186.JPG)
 
 ### Login
-![Alt text](/assets/login.JPG)
+![Alt text](/assets/IMG_6185.JPG)
 
 ### Entries
-![Alt text](/assets/entriesform.JPG)
+![Alt text](/assets/IMG_6188.JPG)
 
 ### Chapters
-![Alt text](/assets/chapterform.JPG)
+![Alt text](/assets/IMG_6188.JPG)
 
 ### Entries Show Page
-![Alt text](/assets/postshow.JPG)
+![Alt text](/assets/IMG_6189.JPG)
 
 
 
