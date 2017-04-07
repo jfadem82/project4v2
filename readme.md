@@ -31,11 +31,11 @@ Revisit is a digital diary to explore times and places in your life. Each entry 
 ## Getting Started
 After forking/cloning, dont forget to run `npm install`. S3 will not work locally unless you use your own keys and create a config file in the root containing 'auth.js' (which contains your keys). Also you must require 'auth.js' in the server.js . Also must replace all heroku urls with the localhost url where you will be running locally.
 
-##User Stories
+## User Stories
 ![Alt text](/assets/UserStories.png)
 
 
-##Wire Frames
+## Wire Frames
 
 ### Home
 ![Alt text](/assets/IMG_6186.png)
